@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишка - Форма заказа</title>
+  </head>
+
+  <body>
+    <header class="page-header">
+      <a class="page-header__logo" href="index.html">
+        <img src="http://placehold.it/86x35" width="86" height="36" alt="Мишка — Милые штуки ручной работы для дома">
+      </a>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__items">
+              <li class="main-nav__item">
+                <a href="catalog.html">Каталог товаров</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="form.html">Вязание на заказ</a>
+              </li>
+            </ul>
+            <ul class="main-nav__widget-items">
+              <li class="main-nav__widget-item">
+                <form class="main-nav__search-form  search-form" method="get" name="search" action="https://echo.htmlacademy.ru/">
+                  <input class="search-form__input" type="search" name="search-string" id="search-input" placeholder="Поиск по сайту:">
+                  <label class="search-form__label" for="search-input">Поиск по сайту</label>
+                </form>
+              </li>
+              <li class="main-nav__widget-item">
+                <a class="main-nav__widget-cart" href="knitting-to-order.html">Корзина: пока пуста</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+    </header>
+    <main class="page-content">
+      <h1 class="page-content__title">Вязание на заказ</h1>
+      <p class="page-content__descr">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+      <form class="page-content__form  order-form" method="post" action="https://echo.htmlacademy.ru/">
+        <fieldset class="order-form__fieldset">
+          <legend class="order-form__fieldset-name">Тип</legend>
+          <input type="radio" name="change-type" id="change-type-1" value="1" checked="checked">
+          <label for="change-type-1">Аксессуар для интерьера</label>
+          <input type="radio" name="change-type" id="change-type-2" value="1">
+          <label for="change-type-2">Детская игрушка</label>
+        </fieldset>
+        <fieldset class="order-form__fieldset">
+          <legend class="order-form__fieldset-name">Цвет</legend>
+          <input type="checkbox" name="change-color-1" id="change-color-1" value="1" checked="checked">
+          <label for="change-color-1">Белый</label>
+          <input type="checkbox" name="change-color-2" id="change-color-2" value="2" checked="checked">
+          <label for="change-color-2">Серый</label>
+          <input type="checkbox" name="change-color-3" id="change-color-3" value="3">
+          <label for="change-color-3">«Тиффани»</label>
+          <input type="checkbox" name="change-color-4" id="change-color-4" value="4">
+          <label for="change-color-4">Черный</label>
+          <input type="checkbox" name="change-color-5" id="change-color-5" value="5">
+          <label for="change-color-5">Розовый</label>
+          <input type="checkbox" name="change-color-6" id="change-color-6" value="6">
+          <label for="change-color-6">Оранжевый</label>
+        </fieldset>
+        <fieldset class="order-form__fieldset">
+          <legend class="order-form__fieldset-name">ФИО</legend>
+          <label class="" for="fio-name">Имя</label>
+          <input class="" type="text" name="name" id="fio-name" placeholder="Введите ваше имя*" value="">
+          <label class="" for="fio-family">Фамилия</label>
+          <input class="" type="text" name="family" id="fio-family" placeholder="Укажите фамилию*" value="">
+          <label class="" for="fio-patronymic">Отчество</label>
+          <input class="" type="text" name="first-name" id="fio-patronymic" placeholder="Отчество, если желаете" value="">
+        </fieldset>
+        <fieldset class="order-form__fieldset">
+          <legend class="order-form__fieldset-name">Телефон</legend>
+          <label class="" for="tel">Тел</label>
+          <input class="" type="tel" name="tel" id="tel" pattern="" placeholder="+7 ХХХ ХХ ХХ*" value="">
+        </fieldset>
+        <fieldset class="order-form__fieldset">
+          <legend class="order-form__fieldset-name">E-mail</legend>
+          <label class="" for="fio-name">E-mail</label>
+          <input class="" type="email" name="email" id="email" pattern="" placeholder="Ваш Email*" value="">
+        </fieldset>
+        <fieldset class="order-form__fieldset">
+          <legend class="order-form__fieldset-name">Доп</legend>
+          <label class="" for="fio-name">Примечание</label>
+          <textarea name="add" id="add" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+        </fieldset>
+        <p class="order-form__footnote">*Поля обязательны для заполнения</p>
+        <button class="order-form__submit" type="submit">Отправить заказ</button>
+      </form>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <p class="page-footer__social">
+          <span class="social-links">
+            <a class="social-link  social-link--in" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+            <a class="social-link  social-link--fb" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+            <a class="social-link  social-link--tw" href="https://twitter.com/htmlacademy_ru">Наш Твитер</a>
+          </span>
+        </p>
+        <p class="page-footer__copyright">
+          Разработано:
+          <a class="page-footer__copyright-link  btn" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        </p>
+      </div>
+    </footer>
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=XRccL_Lvur5qfc217VO1PrxToS3VY2PP&amp;width=100%25&amp;height=200&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true&id=yandex_map"></script>
+  </body>
+
+</html>
