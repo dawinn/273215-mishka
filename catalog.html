@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишка - Каталог товара</title>
+  </head>
+
+  <body>
+    <header class="page-header">
+      <a class="page-header__logo" href="index.html">
+        <img src="http://placehold.it/86x35" width="86" height="36" alt="Мишка — Милые штуки ручной  работы для дома">
+      </a>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__items">
+              <li class="main-nav__item">
+                <a href="catalog.html">Каталог товаров</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="knitting-to-order.html">Вязание на заказ</a>
+              </li>
+            </ul>
+            <ul class="main-nav__widget-items">
+              <li class="main-nav__widget-item">
+                <form class="main-nav__search-form  search-form" method="get" name="search" action="https://echo.htmlacademy.ru/">
+                  <input class="search-form__input" type="search" name="search-string" id="search-input" placeholder="Поиск по сайту:">
+                  <label class="search-form__label" for="search-input">Поиск по сайту</label>
+                </form>
+              </li>
+              <li class="main-nav__widget-item">
+                <a class="main-nav__widget-cart" href="knitting-to-order.html">Корзина: пока пуста</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+    </header>
+    <main>
+      <h1 class="title">Каталог товара</h1>
+
+      <div class="catalog-list">
+        <section class="catalog-list__item  product">
+          <div class="product_img">
+            <img src="http://placehold.it/260x195" width="260" height="195" alt="Зайчик попрыгайчик">
+          </div>
+          <header class="product__header">
+            <h2 class="product__title">Зайчик попрыгайчик</h2>
+            <dl class="product__specification">
+              <dt>
+                Рост
+              </dt>
+              <dd>
+                30 см
+              </dd>
+              <dt>
+                Вес
+              </dt>
+              <dd>
+                200 г
+              </dd>
+            </dl>
+          </header>
+          <footer class="product__footer">
+            <form class="product__order-form" method="post" action="https://echo.htmlacademy.ru/">
+              <input type="hidden" name="title" value="Вязаные корзинки">
+              <div class="product__price">
+                <label for="price-item13">Цена:</label>
+                <input type="number" name="price" id="price-item13" value="1200" readonly>
+              </div>
+              <button class="product__order-btn btn product__order-btn--nojs">Заказать</button>
+            </form>
+          </footer>
+        </section>
+        <section class="catalog-list__item  product">
+          <div class="product_img">
+            <img src="http://placehold.it/260x195" width="260" height="195" alt="Корзинка для белья">
+          </div>
+          <header class="product__header">
+            <h2 class="product__title">Корзинка для белья</h2>
+            <dl class="product__specification">
+              <dt>
+                Диаметр
+              </dt>
+              <dd>
+                15 см
+              </dd>
+              <dt>
+                высота
+              </dt>
+              <dd>
+                10 см
+              </dd>
+            </dl>
+          </header>
+          <footer class="product__footer">
+            <form class="product__order-form" method="post" action="https://echo.htmlacademy.ru/">
+              <input type="hidden" name="title" value="Вязаные корзинки">
+              <div class="product__price">
+                <label for="price-item14">Цена:</label>
+                <input type="number" name="price" id="price-item14" value="690" readonly>
+              </div>
+              <button class="product__order-btn btn product__order-btn--nojs">Заказать</button>
+            </form>
+          </footer>
+        </section>
+        <section class="catalog-list__item  product">
+          <div class="product_img">
+            <img src="http://placehold.it/260x195" width="260" height="195" alt="Большая корзинка для игрушек">
+          </div>
+          <header class="product__header">
+            <h2 class="product__title">Большая корзинка для игрушек</h2>
+            <dl class="product__specification">
+              <dt>
+                Диаметр
+              </dt>
+              <dd>
+                30 см
+              </dd>
+              <dt>
+                высота
+              </dt>
+              <dd>
+                30 см
+              </dd>
+            </dl>
+          </header>
+          <footer class="product__footer">
+            <form class="product__order-form" method="post" action="https://echo.htmlacademy.ru/">
+              <input type="hidden" name="title" value="Вязаные корзинки">
+              <div class="product__price">
+                <label for="price-item15">Цена:</label>
+                <input type="number" name="price" id="price-item15" value="1500" readonly>
+              </div>
+              <button class="product__order-btn btn product__order-btn--nojs">Заказать</button>
+            </form>
+          </footer>
+        </section>
+
+        <section class="catalog-list__item  video">
+          <h2 class="video__title">Процесс производства</h2>
+          <video controls preload="metadata" width="260" height="150" poster="http://placehold.it/260x150"></video>
+          <p class="video_descr">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <a class="video__order-link btn video__order-link--nojs" href="knitting-to-order.html">Сделать заказ</a>
+        </section>
+
+      </div>
+
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <p class="page-footer__social">
+          <span class="social-links">
+            <a class="social-link  social-link--in" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+            <a class="social-link  social-link--fb" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+            <a class="social-link  social-link--tw" href="https://twitter.com/htmlacademy_ru">Наш Твитер</a>
+          </span>
+        </p>
+        <p class="page-footer__copyright">
+          Разработано:
+          <a class="btn  page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        </p>
+      </div>
+    </footer>
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=XRccL_Lvur5qfc217VO1PrxToS3VY2PP&amp;width=100%25&amp;height=200&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true&id=yandex_map"></script>
+  </body>
+
+</html>
