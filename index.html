@@ -7,10 +7,11 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
 
-  <body>
+  <body class="page">
     <header class="page-header">
       <div class="page-header__logo">
-        <img src="http://placehold.it/86x35" width="86" height="36" alt="Мишка — Милые штуки ручной  работы для дома"> </div>
+        <img src="img/logo-mobile.svg" width="86" height="36" alt="Мишка — Милые штуки ручной  работы для дома">
+      </div>
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <div class="main-nav__wrapper">
@@ -37,48 +38,48 @@
       </nav>
     </header>
     <main class="page-content">
-      <h1 class="page-content__ title  page-content__title--index-page">Милые штуки ручной  работы для дома</h1>
+      <h1 class="page-content__title  page-content__title--index-page">Милые штуки ручной  работы для дома</h1>
       <div class="quick-links">
         <a class="quick-links__link" href="home-furnishings.html">Педметы интерьера</a>
         <a class="quick-links__link" href="toys.html">Детские игрушки</a>
       </div>
-      <section class="product product--of-week">
-        <div class="product_img"><!-- TODO: исправить название класса -->
-          <img src="http://placehold.it/260x315" width="260" height="315" alt="Вязаные корзинки">
+      <section class="product-week">
+        <div class="product-week__img">
+          <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
         </div>
-        <header class="product__header">
-          <h2 class="product__title">Вязаные корзинки</h2>
-          <b class="product__subtitle">Товар недели</b>
-          <p class="product__descr">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-          <dl class="product__specification">
+        <header class="product-week__header">
+          <h2 class="product-week__title">Вязаные корзинки</h2>
+          <b class="product-week__subtitle">Товар недели</b>
+          <p class="product-week__descr">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+          <dl class="product-week__specification">
             <dt>
-              Цвет:
+              Цвет
             </dt>
             <dd>
               «Тиффани»/серый
             </dd>
             <dt>
-              Диаметр:
+              Диаметр
             </dt>
             <dd>
               25 см
             </dd>
             <dt>
-              Высота:
+              Высота
             </dt>
             <dd>
               15 см
             </dd>
           </dl>
         </header>
-        <footer class="product__footer">
-          <form class="product__order-form" method="post" action="https://echo.htmlacademy.ru/">
+        <footer class="product-week__footer">
+          <form class="product-week__order-form" method="post" action="https://echo.htmlacademy.ru/">
             <input type="hidden" name="title" value="Вязаные корзинки">
-            <div class="product__price">
+            <div class="product-week__price">
               <label for="price-item13">Цена:</label>
               <input type="number" name="price" id="price-item13" value="990" readonly>
             </div>
-            <button class="product__order-btn btn product__order-btn--nojs">Заказать</button>
+            <button class="product-week__order-btn btn product__order-btn--nojs">Заказать</button>
           </form>
         </footer>
       </section>
@@ -97,7 +98,7 @@
       <section class="reviews">
         <div class="reviews__wrapper  slider">
           <h2 class="reviews__title">Отзывы</h2>
-          <div class="reviews__items">
+          <div class="reviews__items slider__slide">
             <blockquote class="reviews__item  slider__item">
 
               <p>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше
@@ -105,15 +106,17 @@
               <cite class="reviews__auhor-name"><b>Анастасия Красильникова</b> @misssssiskras</cite>
             </blockquote>
 
-            <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-            <button class="reviews__next" type="button">Следующий отзыв</button>
+            <div class="slider__control">
+              <!--<button class="slider__prev" type="button">Предыдущий отзыв</button>
+              <button class="slider__next" type="button">Следующий отзыв</button>-->
+            </div>
           </div>
           <a class="reviews__write  btn" href="add_review.html">Написать</a>
         </div>
 
       </section>
       <section class="contacts">
-        <div class="contacts__wrapper  slider"><!-- TODO: убрать класс slider -->
+        <header class="contacts__header">
           <h2 class="contacts__title">Контакты</h2>
           <dl class="contacts__info">
             <dt>
@@ -131,11 +134,13 @@
               </p>
             </dd>
           </dl>
-          <div class="contacts__map contacts__map--nojs" id="yandex_map">
+        </header>
+        <div class="contacts__map contacts__map--nojs" id="yandex_map">
 
-          </div>
-          <a class="reviews__write  btn" href="add_review.html">Написать</a><!-- TODO: проверить правильность введенного класса -->
         </div>
+        <footer class="contacts__footer">
+          <a class="contacts__write  btn" href="add_review.html">Напишите нам</a>
+        </footer>
 
       </section>
     </main>
@@ -150,7 +155,7 @@
         </p>
         <p class="page-footer__copyright">
           Разработано:
-          <a class="btn  page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         </p>
       </div>
     </footer>
