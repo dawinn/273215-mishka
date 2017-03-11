@@ -1,3 +1,17 @@
 .main-nav {
-  background-color: yellow;
+  @include font-open-sans($font-size, $color-title, bold, $line-height);
+
+  background-color: $color-bg-page;
+
+  &__item {
+    list-style: none;
+  }
+  & a {
+    background-color: $color-bg-page;
+    color: $color-title;
+    text-decoration: none;
+  }
+  &__widget-item {
+    list-style: none;
+  }
 }

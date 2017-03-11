@@ -1,3 +1,22 @@
 .page-footer {
-  background-color: green;
+  padding: 30px;
+  @include font-open-sans(19px, $color-title, bold, 18px);
+
+  background-color: $color-bg-footer;
+
+  &__wrapper {
+    margin: auto;
+    max-width: 260px;
+  }
+
+  &__copyright-link {
+    vertical-align: top;
+    display: inline-block;
+    width: 27px;
+    height: 24px;
+    font-size: 0;
+    background-image: url(../img/logo-htmlacademy.svg);
+    background-repeat: no-repeat;
+    background-size: 27px 24px;
+  }
 }

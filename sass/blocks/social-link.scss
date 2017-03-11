@@ -1,3 +1,22 @@
 .social-link {
-  background-color: lightblue;
+  width: 30px;
+  height: 30px;
+
+  font-size: 0;
+
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  &--fb {
+    background-image: url(../img/icon-fb.svg);
+  }
+
+  &--tw {
+    background-image: url(../img/icon-twitter.svg);
+  }
+
+  &--in {
+    background-image: url(../img/icon-insta.svg);
+  }
 }

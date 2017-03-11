@@ -1,3 +1,45 @@
 .slider {
-  background-color: white;
+  background-color: $color-bg-page;
+
+  &__control {
+    position: relative;
+    display: flex;
+
+    margin-top: 35px;
+    margin-bottom: 40px;
+    border: none;
+  }
+
+  &__control::before,
+  &__control::after{
+    content: "";
+    position: relative;
+    padding-top: 12px;
+    padding-right: 40px;
+    padding-bottom: 12px;
+    padding-left: 38px;
+    width: 51px;
+    height: 26px;
+
+    font-size: 0;
+    background-color: $color-bg-page;
+    border: 1px solid $color-border-light;
+  }
+
+  &__control::after {
+    content: "";
+    margin-left: -1px;
+    background-image: url(../img/icon-right-arrow.svg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 51px 26px;
+  }
+
+  &__control::before{
+    content: "";
+    background-image: url(../img/icon-left-arrow.svg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 51px 26px;
+  }
 }

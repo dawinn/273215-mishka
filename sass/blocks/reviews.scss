@@ -1,3 +1,21 @@
 .reviews {
-  background-color: magenta;
+  margin: 0;
+  padding: 30px;
+
+  @include font-open-sans($font-size - 2px, $color, normal, $line-height-h1);
+
+  &__title {
+    @include set-title-h2();
+  }
+
+  &__auhor-name {
+    font-style: normal;
+    font-size: 17px;
+  }
+
+  &__auhor-name b {
+    font-size: 18px;
+    line-height: 24px;
+    color: $color-title;
+  }
 }
