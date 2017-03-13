@@ -29,6 +29,14 @@
     text-decoration: none;
   }
 
+  & a:hover {
+    color: rgba($color-title, 0.6);
+  }
+
+  & a:active {
+    color: rgba($color-title, 0.3);
+  }
+
   &__toggle {
     display: none;
     width: 25px;
