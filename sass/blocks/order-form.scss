@@ -1,0 +1,169 @@
+.order-form {
+
+  @include font-open-sans(17px, $color, bold, 18px);
+
+  &__prefix-note {
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: normal;
+    color: $color;
+  }
+
+  &__postfix-note {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: normal;
+    color: $color;
+  }
+  &__fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-top: 1px solid $color-border-accent;
+  }
+
+  &__fieldset-name {
+    margin: 0;
+    padding-right: 20px;
+    color: $color-accent;
+  }
+
+  &__field-radio,
+  &__field-checkbox {
+    margin: 20px 0;
+    padding: 0;
+    min-height: 40px;
+  }
+
+  &__field-radio input,
+  &__field-checkbox input {
+    display: none;
+  }
+
+  &__field-radio label,
+  &__field-checkbox label {
+    position: relative;
+    padding-left: 60px;
+
+    vertical-align: middle;
+    color: $color-title;
+  }
+
+  &__field-radio label::before,
+  &__field-checkbox label::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -8px;
+    width: 36px;
+    height: 36px;
+
+    border: 2px solid $color;
+  }
+
+  &__field-radio label::before {
+    border-radius: 50%;
+  }
+
+  &__field-radio label:hover::before,
+  &__field-checkbox label:hover::before {
+    border-color: $color-border-accent;
+  }
+
+  &__field-radio label:active::before,
+  &__field-checkbox label:active::before {
+    border-color: rgba($color-border, 0.3);
+  }
+
+  &__field-radio input:checked + label::after{
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+
+    background-color: $color-accent;
+    border-radius: 50%;
+  }
+
+  &__field-checkbox input:checked + label::after{
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 4px;
+    width: 16px;
+    height: 8px;
+
+    border-left: 2px solid $color-title;
+    border-bottom: 2px solid $color-title;
+
+    transform: rotate(-45deg);
+  }
+
+  &__input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__input label{
+    margin-bottom: 14px;
+
+    display: block;
+
+    font-size: inherit;
+    line-height: inherit;
+    color: $color-title;
+  }
+
+  &__input input{
+    padding-bottom: 12px;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+
+    border: none;
+    border-bottom: 2px solid $color-title;
+  }
+
+  &__input input:hover,
+  &__input input:active {
+    border-bottom-color: $color-border-accent;
+  }
+
+  &__input--tel label,
+  &__input--email label {
+    display: none;
+  }
+
+  &__area {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__area label {
+    display: none;
+  }
+
+  &__area textarea {
+    padding: 16px;
+    width: 100%;
+    box-sizing: border-box;
+
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+
+    border: 2px solid $color;
+  }
+
+  &__area textarea:hover,
+  &__area textarea:active {
+    border-color: $color-border-accent;
+    outline-color: $color-border-accent;
+  }
+}

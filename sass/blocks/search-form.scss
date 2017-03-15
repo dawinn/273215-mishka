@@ -1,0 +1,14 @@
+.search-form {
+  @include font-open-sans($font-size, $color-title, bold, $line-height);
+
+  background-color: $color-bg-page;
+
+  & input {
+    display: none;
+    border: none;
+  }
+
+  & label {
+
+  }
+}

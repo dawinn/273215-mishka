@@ -1,0 +1,50 @@
+.product {
+  margin: 30px;
+  padding: 0;
+
+  @include font-open-sans ($font-size, $color-title,bold, $line-height);
+
+  border: 1px solid $color-border-light;
+
+  &__img {
+    margin: 0;
+    padding: 0;
+  }
+  &__header {
+    margin-left: 30px;
+    margin-right: 30px;
+
+    border-bottom: 1px solid $color-border-light;
+  }
+
+  &__footer {
+    margin-top: 25px;
+    margin-left: 30px;
+    margin-right: 30px;
+
+
+  }
+
+  &__descr {
+    font-size: 13px;
+    line-height: 30px;
+    font-weight: normal;
+  }
+
+  &__price label {
+    font-size: 0;
+  }
+
+  &__price input {
+    font: inherit;
+    border: none;
+  }
+
+  &__price::after {
+    content: "руб";
+  }
+
+  &__order-btn {
+    /* TODO: заменить текст картинкой */
+  }
+}

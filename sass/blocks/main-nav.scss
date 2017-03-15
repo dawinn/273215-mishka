@@ -1,0 +1,48 @@
+.main-nav {
+  @include font-open-sans($font-size, $color-title, bold, $line-height);
+
+  background-color: $color-bg-page;
+
+  &__wrapper {
+    margin:0 auto;
+    padding: 0;
+    text-align: center;
+  }
+
+  &__items,
+  &__widget-items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item,
+  &__widget-item {
+    padding-top: 27px;
+    padding-bottom: 27px;
+    list-style: none;
+  }
+
+  & a {
+    background-color: $color-bg-page;
+    color: $color-title;
+    text-decoration: none;
+  }
+
+  & a:hover {
+    color: rgba($color-title, 0.6);
+  }
+
+  & a:active {
+    color: rgba($color-title, 0.3);
+  }
+
+  &__toggle {
+    display: none;
+    width: 25px;
+    height: 25px;
+    font-size: 0;
+    background-color: $color-bg-page;
+    border: none;
+  }
+}

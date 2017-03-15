@@ -1,0 +1,33 @@
+.product-week {
+  margin-top:30px;
+  margin-bottom: 30px;
+  padding: 30px;
+
+  @include font-open-sans ($font-size, $color, normal, $line-height);
+
+  background-color: $color-bg-page;
+
+
+  &__title {
+    @include set-title-h2();
+  }
+
+  &__subtitle {
+    color: $color-accent;
+
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  &__img {
+
+  }
+
+  &__descr {
+    font-size: 15px;
+  }
+
+  &__price input{
+    border: none;
+  }
+}

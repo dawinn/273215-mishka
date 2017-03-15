@@ -1,0 +1,12 @@
+.page-header {
+  @include font-open-sans($font-size, $color-title, bold, $line-height);
+  text-align: center;
+
+  background-color: $color-bg-page;
+
+  & a {
+    background-color: $color-bg-page;
+    color: $color-title;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,24 @@
+.video {
+  margin: 30px;
+  padding: 0;
+
+  @include font-open-sans ($font-size, $color-title,bold, $line-height);
+
+  border: 1px solid $color-border-light;
+
+  &__title {
+    padding-left: 90px;
+  }
+
+  &__descr {
+    padding-left: 35px;
+    padding-right: 35px;
+    font-size: 13px;
+    font-weight: normal;
+    color: #color;
+  }
+
+&__order-link {
+  margin: 35px;
+}
+}

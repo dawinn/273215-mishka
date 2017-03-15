@@ -1,0 +1,24 @@
+.advantages {
+  padding: 30px;
+
+  @include font-open-sans($font-size, $color-title, bold, $line-height - 4px);
+
+  background-color: $color-bg-page;
+
+  &__title {
+    font-size: $font-size-h2;
+    line-height: $line-height-h2;
+  }
+
+  &__items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 60px;
+  }
+}

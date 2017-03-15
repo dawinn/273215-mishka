@@ -4,14 +4,17 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка - Каталог товара</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
-  <body>
+  <body class="page">
     <header class="page-header">
       <a class="page-header__logo" href="index.html">
-        <img src="http://placehold.it/86x35" width="86" height="36" alt="Мишка — Милые штуки ручной  работы для дома">
+        <picture>
+          <img src="img/logo-mobile.svg" width="86" height="36" alt="Мишка — Милые штуки ручной  работы для дома">
+        </picture>
       </a>
-        <nav class="main-nav main-nav--closed main-nav--nojs">
+        <nav class="main-nav  main-nav--closed  main-nav--nojs">
           <button class="main-nav__toggle" type="button">Открыть меню</button>
           <div class="main-nav__wrapper">
             <ul class="main-nav__items">
@@ -36,30 +39,20 @@
           </div>
         </nav>
     </header>
-    <main>
-      <h1 class="title">Каталог товара</h1>
+    <main class="page-content">
+      <h1 class="page-content__title">Каталог товара</h1>
 
       <div class="catalog-list">
         <section class="catalog-list__item  product">
           <div class="product_img">
-            <img src="http://placehold.it/260x195" width="260" height="195" alt="Зайчик попрыгайчик">
+            <img src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="Зайчик попрыгайчик">
           </div>
           <header class="product__header">
             <h2 class="product__title">Зайчик попрыгайчик</h2>
-            <dl class="product__specification">
-              <dt>
-                Рост
-              </dt>
-              <dd>
-                30 см
-              </dd>
-              <dt>
-                Вес
-              </dt>
-              <dd>
-                200 г
-              </dd>
-            </dl>
+            <p class="product__descr">
+                <span>Рост 30 см</span>
+                <span>Вес 200 г</span>
+            </p>
           </header>
           <footer class="product__footer">
             <form class="product__order-form" method="post" action="https://echo.htmlacademy.ru/">
@@ -78,20 +71,10 @@
           </div>
           <header class="product__header">
             <h2 class="product__title">Корзинка для белья</h2>
-            <dl class="product__specification">
-              <dt>
-                Диаметр
-              </dt>
-              <dd>
-                15 см
-              </dd>
-              <dt>
-                высота
-              </dt>
-              <dd>
-                10 см
-              </dd>
-            </dl>
+            <p class="product__descr">
+              <span>Диаметр 15 см</span>
+              <span>высота 10 см</span>
+            </p>
           </header>
           <footer class="product__footer">
             <form class="product__order-form" method="post" action="https://echo.htmlacademy.ru/">
@@ -110,20 +93,10 @@
           </div>
           <header class="product__header">
             <h2 class="product__title">Большая корзинка для игрушек</h2>
-            <dl class="product__specification">
-              <dt>
-                Диаметр
-              </dt>
-              <dd>
-                30 см
-              </dd>
-              <dt>
-                высота
-              </dt>
-              <dd>
-                30 см
-              </dd>
-            </dl>
+            <p class="product__descr">
+              <span>Диаметр 30 см</span>
+              <span>высота 30 см</span>
+            </p>
           </header>
           <footer class="product__footer">
             <form class="product__order-form" method="post" action="https://echo.htmlacademy.ru/">
@@ -139,9 +112,9 @@
 
         <section class="catalog-list__item  video">
           <h2 class="video__title">Процесс производства</h2>
-          <video controls preload="metadata" width="260" height="150" poster="http://placehold.it/260x150"></video>
-          <p class="video_descr">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-          <a class="video__order-link btn video__order-link--nojs" href="knitting-to-order.html">Сделать заказ</a>
+          <video controls preload="metadata" width="260" height="150" poster="img/video-mobile@1x.jpg"></video>
+          <p class="video__descr">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <a class="video__order-link btn video__order-link--nojs"  href="form.html">Сделать заказ</a>
         </section>
 
       </div>
@@ -158,7 +131,7 @@
         </p>
         <p class="page-footer__copyright">
           Разработано:
-          <a class="btn  page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         </p>
       </div>
     </footer>

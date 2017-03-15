@@ -1,0 +1,31 @@
+.contacts {
+  @include font-open-sans(15px,$color,normal, 30px);
+
+  background-color: $color-bg-page;
+
+  &__header {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 30px;
+  }
+
+  &__footer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 30px;
+  }
+
+  &__title {
+    font-size: 18px;
+    color: $color-title;
+
+  }
+
+  &__write {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  &__info dt{
+    float: left;
+  }
+}
