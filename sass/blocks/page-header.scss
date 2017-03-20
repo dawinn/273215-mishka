@@ -1,12 +1,32 @@
 .page-header {
-  @include font-open-sans($font-size, $color-title, bold, $line-height);
-  text-align: center;
+  @include container;
 
-  background-color: $color-bg-page;
+  &__logo {
+    height: 80px;
 
-  & a {
-    background-color: $color-bg-page;
-    color: $color-title;
-    text-decoration: none;
+    box-shadow: inset 0 1px 0 0 $border-lightgrey,
+    inset 0 -1px 0 0 $border-lightgrey;
+  }
+}
+
+@media ($tablet-widths) {
+  .page-header {
+    &__logo {
+      position: absolute;
+      width: 217px;;
+
+      height: 90px;
+    }
+  }
+}
+
+@media ($desktop-widths) {
+  .page-header {
+    &__logo {
+      left: 50%;
+      width: 149px;
+      height: 89px;
+      margin-left: -74px;
+    }
   }
 }

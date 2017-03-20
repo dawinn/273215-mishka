@@ -1,33 +1,211 @@
 .product-week {
   margin-top:30px;
   margin-bottom: 30px;
-  padding: 30px;
 
-  @include font-open-sans ($font-size, $color, normal, $line-height);
+  @include set-font-size($default-font-size);
+  color: inherit;
+  background-color: inherit;
 
-  background-color: $color-bg-page;
-
+  &__wrapper {
+    @include container;
+    width: 260px;
+  }
 
   &__title {
-    @include set-title-h2();
+    margin: 0;
+    @include set-font-size($h2-font-size);
   }
 
   &__subtitle {
-    color: $color-accent;
+    margin-bottom: 30px;
 
+    color: $text-cyan;
+
+    font-size: 17px;
+    line-height: 24px;
     text-transform: uppercase;
     font-weight: bold;
   }
 
   &__img {
-
+    width: 100%;
+    height: auto;
+    margin-top: 28px;
+    margin-bottom: 20px;
   }
 
   &__descr {
-    font-size: 15px;
+    margin-top: 22px;
+    margin-right: 0;
+    margin-bottom: 25px;
+    margin-left: 0;
   }
 
-  &__price input{
-    border: none;
+  &__specification {
+    margin: 25px 0;
+  };
+
+  &__specification dt{
+    position: relative;
+    display: block;
+    width: 90px;
+    padding-right: 7px;
+    float: left;
+  };
+
+  &__specification dt::after {
+    content: ":";
+    position: absolute;
+
+  }
+
+  &__specification dt,
+  &__specification dd{
+    margin-bottom: 7px;
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid $border-lightgrey;
+  };
+  &__footer {
+    width: 100%;
+    text-align: center;
+  }
+
+  &__price {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 17px;
+  }
+
+  &__order-btn {
+    width: 100%;
+    margin-top: 24px;
+    margin-bottom: 20px;
+  }
+}
+
+@media ($tablet-widths) {
+  .product-week {
+    margin-top:45px;
+    margin-bottom: 50px;
+    @include set-font-size($default-font-size,medium);
+
+    @include clearfix;
+
+    &__header {
+      margin-bottom: 48px;
+    }
+
+    &__title {
+      @include set-font-size($h2-font-size,medium);
+      letter-spacing: -0.4px;
+    }
+
+    &__subtitle {
+      position:relative;
+      float:right;
+      top: -40px;
+      right: 30px;
+      width: 70px;
+      line-height: 17px;
+      text-align: center;
+    }
+
+    &__content,
+    &__footer {
+      float: left;
+      width: 288px;
+      margin-right: 45px;
+    }
+
+    &__descr {
+      margin: 0;
+    }
+
+    &__img {
+      float: right;
+      width: 334px;
+      margin: 0;
+      margin-top: -5px;
+    }
+
+    &__specification {
+      margin-top: 40px;
+      margin-bottom: 52px;
+
+      font-size: 15px;
+    };
+
+    &__specification dt{
+      position: relative;
+      display: block;
+      width: 90px;
+      padding-right: 7px;
+      float: left;
+    };
+
+    &__specification dt::after {
+      content: ":";
+      position: absolute;
+
+    }
+    &__specification dt,
+    &__specification dd{
+      margin-bottom: 4px;
+      padding-bottom: 5px;
+
+      border-bottom: 1px solid $border-lightgrey;
+    };
+
+    &__price {
+      margin-bottom: 32px;
+      padding-left: 7px;
+
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+}
+
+@media ($desktop-widths) {
+  .product-week {
+    position: relative;
+    margin-top: 70px;
+
+    &__header {
+      position: relative;
+      z-index: 10;
+      padding-top: 62px;
+    }
+
+    &__title {
+      margin-left: 171px;
+      @include set-font-size($h2-font-size,large);
+    }
+
+    &__subtitle {
+      position: absolute;
+      left: 47px;
+      top: initial;
+      bottom: -22px;
+    }
+
+    &__content,
+    &__footer {
+      margin-left: 175px;
+      margin-right: 525px;
+    }
+
+    &__specification {
+      margin-top: 53px;
+      margin-bottom: 106px;
+    }
+
+    &__img {
+      position: absolute;
+      top: 58px;
+      right: 0;
+      width: 525px;
+    }
   }
 }

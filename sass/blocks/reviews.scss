@@ -1,21 +1,107 @@
 .reviews {
   margin: 0;
-  padding: 30px;
+  margin-top: 30px;
+  padding-bottom: 40px;
 
-  @include font-open-sans($font-size - 2px, $color, normal, $line-height-h1);
+  font-size: 15px;
+  line-height: 30px;
+  color: $text-gray;
 
-  &__title {
-    @include set-title-h2();
+  &__wrapper {
+    @include container;
+    width: 260px;
   }
 
+  &__title {
+    margin: 0;
+    margin-bottom: 25px;
+    @include set-font-size($h2-font-size);
+  }
+
+  &__item {
+    margin: 0;
+  }
+
+  &__item p{
+    margin-bottom: 23px;
+  }
   &__auhor-name {
     font-style: normal;
     font-size: 17px;
+    margin-top: 30px;
   }
 
   &__auhor-name b {
     font-size: 18px;
     line-height: 24px;
-    color: $color-title;
+    color: $text-black;
   }
+}
+
+@media ($tablet-widths) {
+  .reviews {
+    margin-top: 53px;
+    padding-bottom: 111px;
+    font-size: 17px;
+    background: $bg-white url(../img/review@1x.jpg) -10px 0 no-repeat;
+
+    &__title {
+      margin: 0;
+      margin-bottom: 49px;
+      padding-top: 77px;
+      @include set-font-size($h2-font-size, medium);
+    }
+
+    &__item p{
+      margin-bottom: 56px;
+    }
+
+    &__auhor-name span {
+      display: block;
+    }
+
+    &__write {
+      position: absolute;
+      top: 79px;
+      right: 0;
+      width: 175px;
+    }
+  }
+}
+
+@media ($desktop-widths) {
+  .reviews {
+    background: none;
+    margin-top: 57px;
+    padding-bottom: 63px;
+    margin-bottom: 29px;
+
+    &__wrapper {
+      padding-bottom: 96px;
+      background: $bg-white url(../img/review@1x.jpg) 0 0 no-repeat;
+    }
+
+    &__title {
+      margin-left: 175px;
+      padding-top: 73px;
+      @include set-font-size($h2-font-size, large);
+    }
+
+    &__item {
+      margin-left: 175px;
+      margin-right: 100px;
+    }
+
+    &__item p{
+      margin-bottom: 36px;
+    }
+
+    &__write {
+      position: absolute;
+      top: 82px;
+      right: 0;
+      width: 175px;
+    }
+  }
+
 }

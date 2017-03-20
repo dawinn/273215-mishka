@@ -1,22 +1,96 @@
 .page-footer {
-  padding: 30px;
-  @include font-open-sans(19px, $color-title, bold, 18px);
 
-  background-color: $color-bg-footer;
+  font-size: 19px;
+  line-height: 18px;
+  color: $text-black;
+  font-weight: bold;
+
+  //background-color: $bg-lightgrey;
 
   &__wrapper {
-    margin: auto;
-    max-width: 260px;
+    @include container;
+    width: 260px;
   }
 
+  &__social + &__copyright {
+    border-top: 1px solid $border-darklightgrey;
+  }
+  &__logo {
+    display: none;
+  }
+
+  &__social {
+    margin: 0;
+    padding: 24px 0;
+  }
+
+  &__copyright {
+    display: block;
+    margin: 0;
+    padding: 27px 0;
+
+    text-align: center;
+
+  }
   &__copyright-link {
-    vertical-align: top;
+    vertical-align: middle;
     display: inline-block;
     width: 27px;
     height: 24px;
+    margin-left: 20px;
     font-size: 0;
     background-image: url(../img/logo-htmlacademy.svg);
     background-repeat: no-repeat;
     background-size: 27px 24px;
+  }
+}
+
+@media ($tablet-widths) {
+  .page-footer {
+    margin-top: 54px;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__logo {
+      display: block;
+      width: 102px;
+      height: 143px;
+    }
+
+    &__social {
+      margin-left: 75px;
+      padding: 0;
+      padding-top: 5px;
+    }
+
+    &__social + &__copyright {
+      border-top: none;
+    }
+
+    &__copyright {
+      padding: 0;
+      padding-top: 12px;
+    }
+
+    &__copyright-link {
+      height: 34px;
+    }
+  }
+}
+
+@media ($desktop-widths) {
+  .page-footer {
+    &__social {
+      padding-top: 0;
+    }
+
+    &__copyright {
+      padding-top: 0;
+    }
   }
 }

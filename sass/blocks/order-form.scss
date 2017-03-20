@@ -19,13 +19,13 @@
     margin: 0;
     padding: 0;
     border: none;
-    border-top: 1px solid $color-border-accent;
+    border-top: 1px solid $border-color-accent;
   }
 
   &__fieldset-name {
     margin: 0;
     padding-right: 20px;
-    color: $color-accent;
+    color: map-get($text-color,accent);
   }
 
   &__field-radio,
@@ -58,7 +58,7 @@
     width: 36px;
     height: 36px;
 
-    border: 2px solid $color;
+    border: 2px solid $border-color-null;
   }
 
   &__field-radio label::before {
@@ -67,12 +67,12 @@
 
   &__field-radio label:hover::before,
   &__field-checkbox label:hover::before {
-    border-color: $color-border-accent;
+    border-color: $border-color-accent;
   }
 
   &__field-radio label:active::before,
   &__field-checkbox label:active::before {
-    border-color: rgba($color-border, 0.3);
+    border-color: rgba(#444444, 0.3);
   }
 
   &__field-radio input:checked + label::after{
@@ -83,7 +83,7 @@
     width: 16px;
     height: 16px;
 
-    background-color: $color-accent;
+    background-color: $border-color-accent;
     border-radius: 50%;
   }
 
@@ -95,8 +95,8 @@
     width: 16px;
     height: 8px;
 
-    border-left: 2px solid $color-title;
-    border-bottom: 2px solid $color-title;
+    border-left: 2px solid $border-color-dark;
+    border-bottom: 2px solid $border-color-dark;
 
     transform: rotate(-45deg);
   }
@@ -127,12 +127,12 @@
     color: inherit;
 
     border: none;
-    border-bottom: 2px solid $color-title;
+    border-bottom: 2px solid $border-color-dark;
   }
 
   &__input input:hover,
   &__input input:active {
-    border-bottom-color: $color-border-accent;
+    border-bottom-color: $border-color-accent;
   }
 
   &__input--tel label,
@@ -163,7 +163,7 @@
 
   &__area textarea:hover,
   &__area textarea:active {
-    border-color: $color-border-accent;
-    outline-color: $color-border-accent;
+    border-color: map-get($border-color-map,accent);
+    outline-color: map-get($border-color-map,accent);
   }
 }

@@ -1,20 +1,63 @@
 .quick-links {
+  display: block;
+  min-height: 120px;
+
+  &__item {
+    display: block;
+    width: auto;
+    height: auto;
+    color: #ffffff;
+    background-color: #63d1bb;
+  }
 
   &__link {
+    display: block;
+    width: 100px;
     padding-left: 30px;
     padding-right: 30px;
-    padding-top: 30px;
-    padding-bottom: 35px;
+    padding-top: 27px;
+    padding-bottom: 28px;
 
-    @include font-open-sans(19px, $color-accent, bold, $line-height - 4px);
-
-    background-color: $color-bg-qlink1;
-    color: $color-qlink;
+    font-size: 19px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: inherit;
 
     text-decoration: none;
   }
 
-  &__link:nth-child(even) {
-    background-color: $color-bg-qlink2;
+  &__item--right{
+    background-color: #56c3b2;
+  }
+
+  &__item--left:hover {
+    background-color: #59d5bc;
+  }
+
+  &__item--right:hover {
+    background-color: #46c1ae;
+  }
+
+  &__item--left:active,
+  &__item--left a:active{
+    color: rgba(#ffffff, 0.3);
+    background-color: #59d5bc;
+  }
+
+  &__item--right:active,
+  &__item--right a:active{
+    color: rgba(#ffffff, 0.3);
+    background-color: #46c1ae;
+  }
+}
+
+@media ($tablet-widths) {
+  .quick-links {
+    @include clearfix;
+    &__item {
+      float: left;
+      width: 50%;
+    }
   }
 }

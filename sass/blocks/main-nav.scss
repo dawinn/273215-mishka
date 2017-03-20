@@ -1,48 +1,131 @@
 .main-nav {
-  @include font-open-sans($font-size, $color-title, bold, $line-height);
+  position: relative;
+  z-index: 10;
 
-  background-color: $color-bg-page;
 
   &__wrapper {
-    margin:0 auto;
-    padding: 0;
-    text-align: center;
+      @include clearfix();
+      display: none; /* временно для вертски*/
   }
 
   &__items,
-  &__widget-items {
+  &__widget-items,
+  &__add-items {
     margin: 0;
     padding: 0;
+
+    text-align: center;
     list-style: none;
   }
 
   &__item,
-  &__widget-item {
-    padding-top: 27px;
-    padding-bottom: 27px;
+  &__widget-item,
+  &__add-item {
+    min-height: 79px;
     list-style: none;
-  }
 
-  & a {
-    background-color: $color-bg-page;
-    color: $color-title;
-    text-decoration: none;
-  }
-
-  & a:hover {
-    color: rgba($color-title, 0.6);
-  }
-
-  & a:active {
-    color: rgba($color-title, 0.3);
+    box-shadow: inset 0 -1px 0 0 #ececec;
   }
 
   &__toggle {
-    display: none;
-    width: 25px;
-    height: 25px;
+    position: absolute;
+    top: -49px;
+    right: 31px;
+    width: 20px;
+    height: 2px;
     font-size: 0;
-    background-color: $color-bg-page;
+    background-color: $text-black;
     border: none;
+    box-shadow: 0 6px 0 0 $text-black, 0 12px 0 0 $text-black;
+  }
+}
+
+@media ($tablet-widths) {
+  .main-nav {
+    height: 90px;
+
+    &__wrapper {
+      @include container();
+      @include clearfix();
+      display: block;
+    }
+
+    &__toggle {
+      display: none;
+    }
+
+    &__items {
+      float: left;
+      width: 320px;
+      margin-top: 88px;
+    }
+
+    &__widget-items {
+      float: right;
+      width: 348px;
+    }
+
+    &__item {
+      float: left;
+      min-height: 50px;
+
+    }
+    &__item + &__item {
+      padding-left: 36px;
+    }
+    &__widget-item {
+      float: left;
+      min-height: 90px;
+    }
+
+    &__add-items {
+      display: block;
+      float: right;
+      width: 348px;
+    }
+
+    &__add-item {
+      display: none;
+      float: left;
+      min-height: 50px;
+    }
+    &__add-item:nth-child(1) {
+      display: block;
+      float: right;
+    }
+
+    &__search-form {
+      width: 80px;
+    }
+
+    &__widget-cart {
+      text-align: right;
+      padding-left: 83px;
+    }
+  }
+}
+
+@media ($desktop-widths) {
+  .main-nav {
+    &__items {
+      width: 450px;
+      margin-top: 0;
+    }
+
+    &__widget-items {
+      width: 350px;
+    }
+
+    &__add-items {
+      width: 100%;
+    }
+
+    &__add-item {
+      display: block;
+    }
+
+    &__add-item + &__add-item {
+      padding-left: 40px;
+    }
   }
 }

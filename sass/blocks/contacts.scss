@@ -1,31 +1,187 @@
 .contacts {
-  @include font-open-sans(15px,$color,normal, 30px);
+  font-size: 15px;
+  line-height: 30px;
+  color: $text-gray;
 
-  background-color: $color-bg-page;
+  //background-color: $bg-white;
 
+  &__header,
+  &__footer {
+    @include container;
+    width: 260px;
+  }
   &__header {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 30px;
+    margin-bottom: 34px;
+    padding-right: 30px;
+    padding-left: 30px;
   }
 
   &__footer {
-    margin-top: 10px;
     margin-bottom: 10px;
-    padding: 30px;
+    padding: 0 30px;
   }
 
   &__title {
-    font-size: 18px;
-    color: $color-title;
+    padding-top: 31px;
+    padding-bottom: 10px;
+    margin-bottom: 16px;
 
+    font-size: 18px;
+    color: $text-black;
+  }
+
+  &__info {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__type {
+    margin-bottom: 30px;
+  }
+
+  &__data {
+    width: 183px;
+  }
+
+  &__data p {
+    margin: 0;
+  }
+
+  &__map {
+    height: 463px;
+    margin-bottom: 36px;
   }
 
   &__write {
-    margin-top: 40px;
     margin-bottom: 40px;
   }
-  &__info dt{
-    float: left;
+}
+
+@media ($tablet-widths) {
+  .contacts {
+    margin-top: 17px;
+    padding-top: 27px;
+
+    font-size: 17px;
+
+    &__header {
+      margin-bottom: 55px;
+    }
+
+    &__title {
+      position: relative;
+      margin-bottom: 38px;
+      padding-top: 0;
+      padding-right: 51px;
+      @include set-font-size($h2-font-size,medium);
+    }
+
+    &__title::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: -15px;
+      width: 51px;
+      height: 81px;
+      background: transparent url(../img/icon-flag.svg) 0 0 no-repeat;
+    }
+
+    &__info {
+      justify-content: flex-start;
+    }
+
+    &__data {
+      width: 240px;
+    }
+
+    &__type + &__data{
+      margin-bottom: 0;
+      margin-left: 22px;
+    }
+
+    &__data + &__type {
+      margin-left: 20px;
+    }
+
+    &__map {
+      margin-bottom: 51px;
+    }
+
+    &__write {
+      margin: 0 auto;
+      width:227px;
+    }
+  }
+}
+
+@media ($desktop-widths) {
+  .contacts {
+    padding-top: 67px;
+
+    font-size: 17px;
+
+    @include clearfix;
+
+    &__wrapper {
+      width: 1050px;
+      margin: 0 auto;
+    }
+    &__header,
+    &__footer {
+      float: left;
+      width: 330px;
+      margin-top: 27px;
+      margin-bottom: 53px;
+      margin-left: 50px;
+      padding: 0;
+      padding-left: 120px;
+    }
+
+    &__title {
+      position: relative;
+      margin-bottom: 38px;
+      padding-top: 0;
+      padding-right: 51px;
+      @include set-font-size($h2-font-size,large);
+    }
+
+    &__title::after {
+      content: "";
+      position: absolute;
+      left: -107px;
+      top: -8px;
+      width: 51px;
+      height: 81px;
+      background: transparent url(../img/icon-flag.svg) 0 0 no-repeat;
+    }
+
+    &__info {
+      margin-left: 4px;
+      justify-content: space-between;
+    }
+
+    &__data {
+      width: 248px;
+    }
+
+    &__data + &__type {
+      margin-left: 0;
+    }
+
+    &__map {
+      float: right;
+      width: 525px;
+      height: 460px;
+      margin-bottom: 0;
+    }
+
+    &__write {
+      margin-left: 4px;
+      width:227px;
+    }
   }
 }

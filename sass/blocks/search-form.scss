@@ -1,14 +1,21 @@
 .search-form {
-  @include font-open-sans($font-size, $color-title, bold, $line-height);
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+  color: inherit;
+  background-color: inherit;
 
-  background-color: $color-bg-page;
-
-  & input {
+  &__input {
     display: none;
     border: none;
   }
 
-  & label {
+}
 
+@media ($tablet-widths) {
+  .search-form {
+    &__label {
+      font-size: 0;
+    }
   }
 }

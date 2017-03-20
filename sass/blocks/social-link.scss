@@ -4,7 +4,7 @@
 
   font-size: 0;
 
-  background-size: 30px 30px;
+  background-size: 24px 24px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
 
@@ -18,5 +18,9 @@
 
   &--in {
     background-image: url(../img/icon-insta.svg);
+  }
+
+  & + & {
+    margin-left: 33px;
   }
 }

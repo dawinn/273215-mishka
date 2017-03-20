@@ -1,6 +1,25 @@
 .page {
+  margin: 0;
+  padding: 0;
   min-width: 320px;
-  max-width: 728px;
-  color: $color;
-  background-color: $color-bg-page;
+
+  font-family: "Open Sans", "Verdana", sans-serif;
+  @include set-font-size ($default-font-size);
+  font-weight: normal;
+  font-style: normal;
+  color: $text-gray;
+  background-color: $bg-white;
+
+  & img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media ($tablet-widths) {
+
+}
+
+@media ($desktop-widths) {
+
 }
