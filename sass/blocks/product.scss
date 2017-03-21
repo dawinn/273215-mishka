@@ -20,8 +20,6 @@
 
   &__header {
     padding-bottom: 19px;
-
-    border-bottom: 1px solid $border-lightgrey;
   }
 
   &__footer {
@@ -60,5 +58,48 @@
     position: relative;
     left: -4px;
   }
+}
 
+@media ($tablet-widths) {
+  .product {
+    position: relative;
+
+    @include clearfix;
+
+    &__img {
+      float: left;
+      width: 332px;
+      height: 333px;
+      margin-bottom: 0;
+    }
+
+    &__img img {
+      width: 332px;
+    }
+
+    &__header {
+      float: left;
+      width: 232px;
+      margin-left: 29px;
+      padding-top: 25px;
+    }
+
+    &__title {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    &__descr {
+      font-size: 15px;
+    }
+
+    &__footer {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 272px;
+
+      font-size: 17px;
+    }
+  }
 }

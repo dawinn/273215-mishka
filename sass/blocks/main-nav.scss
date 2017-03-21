@@ -42,7 +42,8 @@
 
 @media ($tablet-widths) {
   .main-nav {
-    height: 90px;
+    height: 89px;
+    box-shadow: inset 0 -1px 0 0 #ececec;
 
     &__wrapper {
       @include container();
@@ -63,6 +64,12 @@
     &__widget-items {
       float: right;
       width: 348px;
+    }
+
+    &__item,
+    &__widget-item,
+    &__add-item {
+      box-shadow: none;
     }
 
     &__item {
@@ -107,8 +114,6 @@
 
 @media ($desktop-widths) {
   .main-nav {
-    height: 89px;
-    box-shadow: inset 0 -1px 0 0 #ececec;
 
     &__items {
       width: 450px;
@@ -121,12 +126,6 @@
 
     &__add-items {
       width: 100%;
-    }
-
-    &__item,
-    &__widget-item,
-    &__add-item {
-      box-shadow: none;
     }
 
     &__add-item {

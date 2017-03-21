@@ -36,3 +36,42 @@
     margin-left: 33px;
   }
 }
+
+@media ($tablet-widths) {
+  .video {
+    margin-top: -1px;
+    margin-bottom: 9px;
+    display: inline-flex;
+    flex-direction: column;
+
+    &__viewer {
+      position: relative;
+      z-index: 10;
+      width: 668px;
+      height: 454px;
+      margin-bottom: 12px;
+      order: -1;
+    }
+
+    &__title {
+      margin-bottom: 17px;
+      padding-left: 106px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    &__descr {
+      margin-bottom: 11px;
+      padding-left: 39px;
+
+      font-size: 15px;
+      line-height: 30px;
+    }
+
+    &__order-link {
+      margin-right: 41px;
+      margin-bottom: 44px;
+      margin-left: 41px;
+    }
+  }
+}

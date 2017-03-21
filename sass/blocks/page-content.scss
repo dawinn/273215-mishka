@@ -4,7 +4,6 @@
 
   &__title-wrapper {
     @include container;
-
   }
   &__title {
     margin: 0;
@@ -33,14 +32,22 @@
 @media ($tablet-widths) {
   .page-content  {
 
+    &__title-wrapper {
+      width: 100%;
+      background-color: $bg-lightgrey;
+    }
+
     &__title {
-      max-width: 660px;
-      padding-top: 153px;
-      padding-bottom: 372px;
+      margin-bottom: 81px;
+      padding-top: 96px;
+      padding-right: 30px;
+      padding-bottom: 77px;
+      padding-left: 39px;
       @include set-font-size($h1-font-size,medium);
     }
 
     &__title--index-page {
+      padding-top: 153px;
       padding-bottom: 372px;
     }
   }
