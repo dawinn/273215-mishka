@@ -51,15 +51,28 @@
 
     &__control {
       position: absolute;
-      bottom: 99px;
+      bottom: 4px;
       right: 4px;
 
       width: 167px;
       margin: 0;
     }
+
+    &__control::before,
+    &__control::after {
+      border: none;
+    }
   }
 }
 
 @media ($desktop-widths) {
-
+  .slider {
+    &__control {
+      position: absolute;
+      bottom: 100px;
+      right: 4px;
+      width: 172px;
+      margin: 0;
+    }
+  }
 }

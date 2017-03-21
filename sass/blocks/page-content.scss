@@ -8,9 +8,10 @@
   }
   &__title {
     margin: 0;
+    margin-bottom: 23px;
     padding-top: 70px;
     padding-right: 30px;
-    padding-bottom: 120px;
+    padding-bottom: 79px;
     padding-left: 30px;
 
     @include set-font-size($h1-font-size);
@@ -20,6 +21,9 @@
   }
 
   &__title--index-page {
+    margin-bottom: 0;
+    padding-bottom: 122px;
+
     background: #f9f9f9 url(../img/hero-mobile@1x.jpg) 50% -19px no-repeat;
   }
 }
@@ -33,6 +37,10 @@
       padding-bottom: 372px;
       @include set-font-size($h1-font-size,medium);
     }
+
+    &__title--index-page {
+      padding-bottom: 372px;
+    }
   }
 }
 
@@ -40,9 +48,14 @@
   .page-content {
 
     &__title {
-      padding-top: 165px;
-      padding-bottom: 350px;
+      max-width: 1050px;
+      padding-top: 153px;
+      padding-bottom: 359px;
+      @include set-font-size($h1-font-size,large);
     }
 
+    &__title--index-page {
+      padding-bottom: 359px;
+    }
   }
 }

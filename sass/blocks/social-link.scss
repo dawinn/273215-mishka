@@ -24,3 +24,11 @@
     margin-left: 33px;
   }
 }
+
+@media ($tablet-widths) {
+  .social-link {
+    & + & {
+      margin-left: 28px;
+    }
+  }
+}
