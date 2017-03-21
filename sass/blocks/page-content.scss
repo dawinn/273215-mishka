@@ -8,16 +8,18 @@
   }
   &__title {
     margin: 0;
-    margin-bottom: 23px;
+    margin-bottom: 30px;
     padding-top: 70px;
     padding-right: 30px;
-    padding-bottom: 79px;
+    padding-bottom: 76px;
     padding-left: 30px;
 
     @include set-font-size($h1-font-size);
     color: $text-black;
     font-weight: bold;
     text-align: center;
+
+    background-color: $bg-lightgrey;
   }
 
   &__title--index-page {

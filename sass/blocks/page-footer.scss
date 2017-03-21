@@ -5,7 +5,7 @@
   color: $text-black;
   font-weight: bold;
 
-  //background-color: $bg-lightgrey;
+  background-color: $bg-lightgrey;
 
   &__wrapper {
     @include container;

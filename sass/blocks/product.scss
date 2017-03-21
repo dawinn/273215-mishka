@@ -1,50 +1,64 @@
 .product {
-  margin: 30px;
-  padding: 0;
 
-  @include font-open-sans ($font-size, $color-title,bold, $line-height);
+  @include set-font-size($default-font-size);
+  font-weight: bold;
+  color: $text-black;
 
-  border: 1px solid $color-border-light;
+  background: $bg-white;
 
   &__img {
     margin: 0;
+    margin-bottom: 22px;
     padding: 0;
   }
-  &__header {
-    margin-left: 30px;
-    margin-right: 30px;
 
-    border-bottom: 1px solid $color-border-light;
+  &__header,
+  &__footer {
+    margin-left: 26px;
+    margin-right: 28px;
+  }
+
+  &__header {
+    padding-bottom: 19px;
+
+    border-bottom: 1px solid $border-lightgrey;
   }
 
   &__footer {
-    margin-top: 25px;
-    margin-left: 30px;
-    margin-right: 30px;
-
+    padding-top: 20px;
+    padding-bottom: 27px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
   }
 
+  &__title {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  &__header  + &__footer {
+    border-top: 1px solid $border-darklightgrey;
+  }
+
   &__descr {
+    margin: 0;
     font-size: 13px;
     line-height: 30px;
     font-weight: normal;
   }
 
-  &__price label {
-    font-size: 0;
+  &__descr * + * {
+    text-transform: lowercase;
   }
 
-  &__price input {
-    font: inherit;
-    border: none;
+  &__descr * + *::before {
+    content: ",";
+    position: relative;
+    left: -4px;
   }
 
-  &__price::after {
-    content: "руб";
-  }
-
-  &__order-btn {
-    /* TODO: заменить текст картинкой */
-  }
 }

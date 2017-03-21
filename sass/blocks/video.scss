@@ -1,24 +1,38 @@
 .video {
-  margin: 30px;
-  padding: 0;
+  margin-bottom: 60px;
+  @include set-font-size ($default-font-size);
+  font-weight: bold;
+  color: $text-black;
 
-  @include font-open-sans ($font-size, $color-title,bold, $line-height);
-
-  border: 1px solid $color-border-light;
+  background: $bg-white;
 
   &__title {
-    padding-left: 90px;
+    margin-bottom: 24px;
+    padding-top: 10px;
+    padding-left: 87px;
+
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  &__viewer {
+    height: 150px;
+    margin-bottom: 8px;
   }
 
   &__descr {
-    padding-left: 35px;
+    margin-bottom: 25px;
+    padding-left: 32px;
     padding-right: 35px;
     font-size: 13px;
     font-weight: normal;
-    color: #color;
+    color: $text-gray;
   }
 
-&__order-link {
-  margin: 35px;
-}
+  &__order-link {
+    margin-top: 25px;
+    margin-right: 33px;
+    margin-bottom: 32px;
+    margin-left: 33px;
+  }
 }
