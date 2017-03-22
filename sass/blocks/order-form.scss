@@ -122,7 +122,7 @@
     border-radius: 50%;
   }
 
-  &__field-checkbox input:checked + label::after{
+  &__field-checkbox input:checked + label::after {
     content: "";
     position: absolute;
     left: 10px;
@@ -223,5 +223,185 @@
   &__submit {
     width: 100%;
     box-sizing: border-box;
+  }
+}
+
+@media ($tablet-widths) {
+  .order-form {
+    width: auto;
+    margin-bottom: -6px;
+
+    font-size: 19px;
+
+    &__prefix-note {
+      width: 668px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+
+      @include set-font-size ($default-font-size,medium);
+    }
+
+    &__wrapper > * {
+      width: 668px;
+      margin: 0 auto;
+    }
+
+    &__wrapper:nth-child(2n+1):not(:last-child) {
+      background-color: $bg-lightgrey;
+    }
+
+    &__fieldset {
+      margin-bottom: 13px;
+      padding-top: 41px;
+
+      border: none;
+    }
+
+    &__fieldset-name {
+      float: left;
+      padding-top: 4px;
+      padding-left: 2px;
+
+      font-size: 17px;
+      line-height: 16px;
+    }
+
+    &__field-radio {
+      margin-left: 168px;
+      margin-bottom: 24px;
+      min-height: 52px;
+    }
+
+    &__field-radio label {
+      padding-left: 81px;
+    }
+
+    &__field-radio label::before {
+      left: 0;
+      top: -15px;
+      width: 48px;
+      height: 48px;
+    }
+
+    &__field-radio input:checked + label::after {
+      left: 16px;
+      top: 1px;
+      width: 20px;
+      height: 20px;
+    }
+
+    &__fieldset--checklist {
+      padding-top: 64px;
+      padding-bottom: 15px;
+    }
+
+    &__fields-checkbox {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      margin-left: 168px;
+    }
+
+    &__field-checkbox {
+      flex-basis: 200px;
+      flex-grow: 1;
+      min-height: 52px;
+    }
+
+    &__field-checkbox:nth-child(2n) {
+      margin-left: 25px;
+    }
+
+      &__field-checkbox label{
+        padding-left: 81px;
+      }
+
+    &__field-checkbox label::before {
+      left: 0;
+      top: -15px;
+      width: 50px;
+      height: 48px;
+    }
+
+    &__field-checkbox input:checked + label::after {
+      left: 13px;
+      top: -2px;
+      width: 27px;
+      height: 14px
+    }
+
+    &__fieldset--fio {
+      padding-top: 51px;
+      margin-bottom: 13px;
+    }
+
+    &__input {
+      display: flex;
+      margin-top: 0;
+      margin-left: 168px;
+      margin-bottom: 38px;
+
+    }
+
+    &__input label {
+      margin-right: 25px;
+    }
+
+    &__input label::after {
+      content: ":";
+    }
+
+    &__input input {
+      padding-left: 17px;
+      padding-bottom: 13px;
+    }
+
+    &__fieldset--tel {
+      padding-top: 63px;
+      margin-bottom: 0;
+    }
+
+    &__input--tel input {
+      background-color: inherit;
+    }
+
+    &__fieldset--email {
+      padding-top: 0;
+      padding-bottom: 11px;
+      margin-bottom: 20px;
+    }
+
+    &__input--email input {
+      background-color: inherit;
+    }
+
+    &__area {
+      margin-left: 168px;
+      margin-bottom: 37px;
+      width: 502px;
+    }
+
+    &__wrapper:last-child {
+      width: 668px;
+      margin: 0 auto;
+      @include clearfix;
+    }
+
+    &__postfix-note {
+      float: right;
+      margin: 0;
+      padding: 0;
+      padding-top: 8px;
+      width: 315px;
+
+      @include set-font-size($default-font-size, medium);
+      text-align: right;
+    }
+
+    &__submit {
+      float: left;
+      width: 230px;
+      font-family: inherit;
+    }
   }
 }

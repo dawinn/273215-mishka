@@ -61,42 +61,46 @@
         <div class="order-form__wrapper">
           <fieldset class="order-form__fieldset">
             <legend class="order-form__fieldset-name">Тип</legend>
-            <div class="order-form__field-radio">
-              <input type="radio" name="change-type" id="change-type-1" value="1" checked="checked">
-              <label for="change-type-1">Аксессуар для интерьера</label>
-            </div>
-            <div class="order-form__field-radio">
-              <input type="radio" name="change-type" id="change-type-2" value="1">
-              <label for="change-type-2">Детская игрушка</label>
-            </div>
+              <div class="order-form__fields-radio">
+                <div class="order-form__field-radio">
+                  <input type="radio" name="change-type" id="change-type-1" value="1" checked="checked">
+                  <label for="change-type-1">Аксессуар для интерьера</label>
+                </div>
+                <div class="order-form__field-radio">
+                  <input type="radio" name="change-type" id="change-type-2" value="1">
+                  <label for="change-type-2">Детская игрушка</label>
+                </div>
+              </div>
           </fieldset>
         </div>
         <div class="order-form__wrapper">
           <fieldset class="order-form__fieldset  order-form__fieldset--checklist">
             <legend class="order-form__fieldset-name">Цвет</legend>
-            <div class="order-form__field-checkbox">
-              <input type="checkbox" name="change-color-1" id="change-color-1" value="1" checked="checked">
-              <label for="change-color-1">Белый</label>
-            </div>
-            <div class="order-form__field-checkbox">
-              <input type="checkbox" name="change-color-2" id="change-color-2" value="2" checked="checked">
-              <label for="change-color-2">Серый</label>
-            </div>
-            <div class="order-form__field-checkbox">
-              <input type="checkbox" name="change-color-3" id="change-color-3" value="3">
-              <label for="change-color-3">«Тиффани»</label>
-            </div>
-            <div class="order-form__field-checkbox">
-              <input type="checkbox" name="change-color-4" id="change-color-4" value="4">
-              <label for="change-color-4">Черный</label>
-            </div>
-            <div class="order-form__field-checkbox">
-              <input type="checkbox" name="change-color-5" id="change-color-5" value="5">
-              <label for="change-color-5">Розовый</label>
-            </div>
-            <div class="order-form__field-checkbox">
-              <input type="checkbox" name="change-color-6" id="change-color-6" value="6">
-              <label for="change-color-6">Оранжевый</label>
+            <div class="order-form__fields-checkbox">
+              <div class="order-form__field-checkbox">
+                <input type="checkbox" name="change-color-1" id="change-color-1" value="1" checked="checked">
+                <label for="change-color-1">Белый</label>
+              </div>
+              <div class="order-form__field-checkbox">
+                <input type="checkbox" name="change-color-2" id="change-color-2" value="2" checked="checked">
+                <label for="change-color-2">Серый</label>
+              </div>
+              <div class="order-form__field-checkbox">
+                <input type="checkbox" name="change-color-3" id="change-color-3" value="3">
+                <label for="change-color-3">«Тиффани»</label>
+              </div>
+              <div class="order-form__field-checkbox">
+                <input type="checkbox" name="change-color-4" id="change-color-4" value="4">
+                <label for="change-color-4">Черный</label>
+              </div>
+              <div class="order-form__field-checkbox">
+                <input type="checkbox" name="change-color-5" id="change-color-5" value="5">
+                <label for="change-color-5">Розовый</label>
+              </div>
+              <div class="order-form__field-checkbox">
+                <input type="checkbox" name="change-color-6" id="change-color-6" value="6">
+                <label for="change-color-6">Оранжевый</label>
+              </div>
             </div>
           </fieldset>
         </div>
@@ -118,14 +122,14 @@
           </fieldset>
         </div>
         <div class="order-form__wrapper">
-          <fieldset class="order-form__fieldset  order-form__fieldset--tel ">
+          <fieldset class="order-form__fieldset  order-form__fieldset--tel">
             <legend class="order-form__fieldset-name">Тел</legend>
             <div class="order-form__input  order-form__input--tel">
               <label for="tel">Тел</label>
               <input type="tel" name="tel" id="tel" pattern="" placeholder="+7 ХХХ ХХ ХХ*" value="">
             </div>
           </fieldset>
-          <fieldset class="order-form__fieldset">
+          <fieldset class="order-form__fieldset  order-form__fieldset--email">
             <legend class="order-form__fieldset-name">E-mail</legend>
             <div class="order-form__input  order-form__input--email">
               <label for="email">E-mail</label>
@@ -142,12 +146,17 @@
             </div>
           </fieldset>
         </div>
-        <p class="order-form__postfix-note">*Поля обязательны для заполнения</p>
-        <button class="order-form__submit  btn" type="submit">Отправить заказ</button>
+        <div class="order-form__wrapper">
+          <p class="order-form__postfix-note">*Поля обязательны для заполнения</p>
+          <button class="order-form__submit  btn" type="submit">Отправить заказ</button>
+        </div>
       </form>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
+        <div class="page-footer__logo">
+
+        </div>
         <p class="page-footer__social">
           <span class="social-links">
             <a class="social-link  social-link--in" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
