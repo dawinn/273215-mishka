@@ -405,3 +405,79 @@
     }
   }
 }
+
+@media ($desktop-widths) {
+  .order-form {
+
+    font-size: 19px;
+
+    &__prefix-note {
+      width: 700px;
+    }
+
+    &__wrapper > * {
+      width: 1050px;
+    }
+
+    &__fieldset-name {
+      padding-left: 57px;
+    }
+
+    &__field-radio {
+      margin-left: 170px;
+    }
+
+    &__fieldset--checklist {
+      padding-top: 62px;
+    }
+
+    &__fields-checkbox {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      margin-left: 170px;
+      width: 790px;
+    }
+
+    &__field-checkbox {
+      flex-basis: 240px;
+      flex-grow: 1;
+      min-height: 52px;
+    }
+
+    &__field-checkbox:nth-child(2n) {
+      margin-left: 0;
+    }
+
+    &__fieldset--fio {
+      padding-top: 51px;
+    }
+
+    &__input {
+      width: 700px;
+      margin-left: 172px;
+      margin-bottom: 38px;
+    }
+
+    &__area {
+      margin-left: 170px;
+      margin-bottom: 32px;
+      width: 700px;
+    }
+
+    &__wrapper:last-child {
+      width: 700px;
+    }
+
+    &__postfix-note {
+      padding-top: 10px;
+      padding-right: 1px;
+      width: 315px;
+    }
+
+    &__submit {
+      width: 230px;
+      margin-left: -4px;
+    }
+  }
+}
