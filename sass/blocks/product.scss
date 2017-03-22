@@ -103,3 +103,33 @@
     }
   }
 }
+
+@media ($desktop-widths) {
+  .product {
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 57px;
+    padding: 0;
+
+    &__img {
+      width: 100%;
+      height: 463px;
+      box-sizing: border-box;
+    }
+
+    &__header {
+      margin-left: 26px;
+      padding-bottom: 71px;
+      margin-bottom: 17px;
+    }
+
+    &__footer {
+      left: 0;
+    }
+
+    &__title {
+      margin-bottom: 4px;
+    }
+  }
+}

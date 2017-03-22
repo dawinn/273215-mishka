@@ -19,7 +19,23 @@
   .catalog-list {
     &__item {
       width: 668px;
+      margin: 0 auto;
       margin-bottom: 53px;
+    }
+  }
+}
+
+@media ($desktop-widths) {
+  .catalog-list {
+    width: 1050px;
+    margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+
+    &__item {
+      width: 315px;
     }
   }
 }

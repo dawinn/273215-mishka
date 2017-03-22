@@ -58,13 +58,16 @@
 
     &__title {
       max-width: 1050px;
-      padding-top: 153px;
-      padding-bottom: 359px;
+      margin-bottom: 129px;
+      padding-top: 93px;
+      padding-bottom: 103px;
       @include set-font-size($h1-font-size,large);
     }
 
     &__title--index-page {
+      padding-top: 153px;
       padding-bottom: 359px;
+
     }
   }
 }
