@@ -1,24 +1,31 @@
 .btn {
   margin: 0;
-  padding: 18px;
+  padding: 14px;
   display: block;
 
-  @include font-open-sans($font-size, $color, bold, $line-height - 4px);
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: bold;
   font-style: normal;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  color: $text-gray;
+  background-color: $bg-white;
 
-  background-color: $color-bg-page;
-  border: 2px solid $color-border;
+  border: 2px solid $border-grey;
 
   &:hover {
-    color: $color-hover;
-
-    background-color: $color;
+    color: $text-white;
+    background-color: $bg-grey;
   }
 
   &:active {
-    color: $color-active;
+    color: rgba($text-white,0.3);
   }
+}
+
+a.btn {
+  padding: 0;
+  line-height: 48px;
 }

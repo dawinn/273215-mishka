@@ -1,24 +1,86 @@
 .advantages {
-  padding: 30px;
+  margin: 0;
+  padding-top: 40px;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: bold;
+  color: $text-black;
 
-  @include font-open-sans($font-size, $color-title, bold, $line-height - 4px);
+  //background-color: $bg-white;
 
-  background-color: $color-bg-page;
-
+  &__wrapper {
+    @include container;
+    width: 260px;
+    margin: 0 auto;
+  }
   &__title {
-    font-size: $font-size-h2;
-    line-height: $line-height-h2;
+    margin: 0;
+    margin-bottom: 28px;
+
+    @include set-font-size($h2-font-size);
   }
 
   &__items {
     list-style: none;
     margin: 0;
     padding: 0;
+    @include clearfix;
   }
 
   &__item {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding-top: 60px;
+    margin: 0;
+    padding-bottom: 24px;
+    padding-top: 59px;
+  }
+}
+
+@media ($tablet-widths) {
+  .advantages {
+    padding-top: 48px;
+    font-size: 20px;
+    line-height: 22px;
+
+    &__title {
+      @include set-font-size($h2-font-size, medium);
+      margin-bottom: 22px;
+    }
+
+    &__items {
+      column-count: 2;
+      column-gap: 1px;
+    }
+
+    &__item {
+      padding-bottom: 30px;
+      padding-top: 81px;
+      float: left;
+    }
+  }
+}
+
+@media ($desktop-widths) {
+  .advantages {
+    padding-top: 85px;
+
+    &__wrapper {
+      width: 700px;
+    }
+
+    &__title {
+      @include set-font-size($h2-font-size, large);
+      margin-bottom: 22px;
+      letter-spacing: -1px;
+    }
+
+    &__items {
+      column-count: 2;
+      column-gap: 1px;
+    }
+
+    &__item {
+      padding-bottom: 30px;
+      padding-top: 81px;
+      float: left;
+    }
   }
 }

@@ -1,12 +1,13 @@
 .slider {
-  background-color: $color-bg-page;
+  background-color: $bg-white;
+  background-color: rgba($bg-white,0.3);
 
   &__control {
     position: relative;
     display: flex;
 
-    margin-top: 35px;
-    margin-bottom: 40px;
+    margin-top: 30px;
+    margin-bottom: 37px;
     border: none;
   }
 
@@ -22,8 +23,7 @@
     height: 26px;
 
     font-size: 0;
-    background-color: $color-bg-page;
-    border: 1px solid $color-border-light;
+    border: 1px solid $border-lightgrey;
   }
 
   &__control::after {
@@ -41,5 +41,38 @@
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: 51px 26px;
+  }
+}
+
+
+@media ($tablet-widths) {
+  .slider {
+    position: relative;
+
+    &__control {
+      position: absolute;
+      bottom: 4px;
+      right: 4px;
+
+      width: 167px;
+      margin: 0;
+    }
+
+    &__control::before,
+    &__control::after {
+      border: none;
+    }
+  }
+}
+
+@media ($desktop-widths) {
+  .slider {
+    &__control {
+      position: absolute;
+      bottom: 100px;
+      right: 4px;
+      width: 172px;
+      margin: 0;
+    }
   }
 }

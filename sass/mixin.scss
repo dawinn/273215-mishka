@@ -1,27 +1,47 @@
-@mixin font-open-sans($size: false, $color: false, $weight: false,  $lh: false) {
-    font-family: "Open Sans", "Verdana", sans-serif;
-    @if $size { font-size: $size; }
-    @if $color { color: $color; }
-    @if $weight { font-weight: $weight; }
-    @if $lh { line-height: $lh; }
+@mixin clearfix() {
+  &::after {
+    content: "";
+
+    display: table;
+    clear: both;
+  }
 }
 
-@mixin set-title-h1 ($size: $font-size-h1, $color: false, $weight: false, $lh: $line-height-h1) {
-  font-family: "Open Sans", "Verdana", sans-serif;
-  font-size: $size;
-  @if $color { color: $color; }
-    @else {color : $color-title; }
-  @if $weight { font-weight: $weight; }
-    @else { font-weight: bold; }
-  line-height: $lh;
+@mixin container() {
+  width: 320px;
+  margin: 0 auto;
+
+  @media ($tablet-widths) {
+    width: 668px;
+  }
+
+  @media ($desktop-widths) {
+    width: 1050px;
+  }
 }
 
-@mixin set-title-h2 ($size: $font-size-h2, $color: false, $weight: false, $lh: $line-height-h2) {
-  font-family: "Open Sans", "Verdana", sans-serif;
-  font-size: $size;
-  @if $color { color: $color; }
-    @else {color : $color-title; }
-  @if $weight { font-weight: $weight; }
-    @else { font-weight: bold; }
-  line-height: $lh;
+@mixin no-outline() {
+  outline: none;
+  background: transparent;
+
+  &::before {
+    display: none;
+  }
+}
+
+@mixin set-font-size($fs-map, $fs-key: null) {
+  @if map-has-key ($fs-map, $fs-key) {
+    $fs-map: map-get($fs-map, $fs-key);
+  } @else {
+    // TODO: задать вывод ошибки
+  }
+
+  @if type-of($fs-map) == "list"  {
+    font-size: nth($fs-map, 1);
+    @if (length($fs-map) > 1) {
+      line-height: nth($fs-map, 2);
+    }
+  } @else {
+    font-size: $fs-map;
+  }
 }
