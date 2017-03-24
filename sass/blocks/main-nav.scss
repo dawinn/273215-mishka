@@ -7,7 +7,7 @@
 }
 
 .main-nav__wrapper {
-    @include clearfix();
+
 }
 
 .main-nav__toggle {
@@ -183,7 +183,7 @@
     left: 0;
     z-index: 10;
 
-    height: 45vh;
+    height: 80vh;
 
     background-color: $bg-white;
   }
@@ -223,16 +223,16 @@
 @media ($tablet-widths) {
   .main-nav {
     height: 89px;
+    margin-top: -89px;
 
     &__wrapper {
-      padding: 0 50px;
-      @include clearfix();
-
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
       align-content: space-between;
+
+      padding: 0 50px;
     }
 
     &__toggle {
@@ -257,6 +257,8 @@
 
     &__add-items {
       order: 3;
+      display: flex;
+      justify-content: flex-end;
       width: auto;
       flex-grow: 1;
     }
@@ -271,13 +273,22 @@
     &__widget-item a,
     &__add-item a{
       margin-left: 0;
-      padding-left: 0;
-      padding-right: 0;
+      padding: 17px 0;
     }
 
     &__item a {
       font-size: 15px;
-      margin-right: 35px;
+    }
+
+    &__item + &__item {
+      margin-left: 20px;
+      padding-left: 15px;
+    }
+
+    &__widget-item a {
+      padding-top: 31px;
+      padding-bottom: 24px;
+
     }
 
     &__add-item a{
@@ -288,15 +299,15 @@
     &__add-item {
       display: none;
     }
+
     &__add-item:nth-child(1) {
       display: block;
-      float: right;
     }
 
     &__search {
-      width: 80px;
+      width: 84px;
       height: 34px;
-      margin-right: 80px;
+      margin-right: 83px;
       font-size: 0;
 
       box-shadow: inset 1px 0 0 0 #ececec,
@@ -304,11 +315,13 @@
     }
 
     &__search::before {
-      left: 31px;
+      left: 34px;
+      top: 37px;
     }
 
     &__widget-cart::before {
-      left: -31px;
+      left: -52px;
+      top: 35px;
     }
   }
 }
@@ -317,15 +330,30 @@
   .main-nav {
 
     &__items {
-      width: 450px;
-      margin-top: 0;
+      order: 1;
+      width: auto;
+    }
+
+    &__item a {
+      padding-top: 31px;
+      padding-bottom: 31px;
+      font-size: 17px;
+    }
+
+    &__item + &__item {
+      margin-left: 35px;
+      padding-left: 36px;
+      box-shadow: inset 1px 0 0 0 #ececec;
     }
 
     &__widget-items {
-      width: 350px;
+      width: auto;
     }
 
     &__add-items {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
       width: 100%;
     }
 
@@ -333,8 +361,16 @@
       display: block;
     }
 
-    &__add-item + &__add-item {
-      padding-left: 40px;
+    &__add-item:nth-child(n+2) a{
+      font-weight: bold;
+    }
+
+    &__add-item:nth-child(2){
+      margin-right: auto;
+    }
+
+    &__add-item:nth-child(3){
+      margin-right: 60px;
     }
   }
 }

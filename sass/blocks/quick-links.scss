@@ -53,17 +53,21 @@
 
 @media ($tablet-widths) {
   .quick-links {
-    @include clearfix;
+    display: flex;
+    margin: 0 50px;
     &__item {
-      float: left;
-      width: 50%;
+      flex-grow: 1;
+      // float: left;
+      // width: 50%;
     }
 
     &__link {
       padding-top: 28px;
+      padding-bottom: 28px;
       padding-left: 37px;
 
       line-height: 30px;
+      letter-spacing: 1.1px;
     }
   }
 }

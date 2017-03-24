@@ -17,9 +17,9 @@
 @media ($tablet-widths) {
   .page-header {
     &__logo {
-      position: absolute;
+      align-self: flex-start;
       width: 113px;;
-      left: 50px;
+      margin-left: 50px;
       height: 90px;
     }
   }
@@ -28,10 +28,10 @@
 @media ($desktop-widths) {
   .page-header {
     &__logo {
-      left: 50%;
+      align-self: center;
       width: 149px;
       height: 89px;
-      margin-left: -74px;
+      margin: 0;
     }
   }
 }

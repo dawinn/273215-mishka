@@ -7,8 +7,14 @@
   background-color: inherit;
 
   &__wrapper {
+    display: flex;
+    flex-direction: column;
     @include container;
     width: 260px;
+  }
+
+  &__footer {
+    order: 2;
   }
 
   &__title {
@@ -29,6 +35,7 @@
   }
 
   &__img {
+    order: 1;
     width: 100%;
     height: auto;
     margin-top: 28px;
@@ -90,46 +97,68 @@
 @media ($tablet-widths) {
   .product-week {
     margin-top:45px;
-    margin-bottom: 50px;
+    margin-bottom: 31px;
     @include set-font-size($default-font-size,medium);
 
-    @include clearfix;
+    &__wrapper {
+      width: auto;
+      padding: 0 6.5%;
+      flex-direction: row-reverse;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    &__img {
+      order: 2;
+      flex-grow: 2;
+      flex-basis: calc(50% - 30px);
+
+      width: 100%;
+      margin: 0;
+      margin-top: 10px;
+    }
 
     &__header {
+      flex-grow: 1;
+      flex-basis: 100%;
+      display: flex;
+      justify-content: space-between;
+
       margin-bottom: 48px;
     }
 
+    &__content{
+      order: 3;
+      flex-grow: 0;
+      flex-basis: calc(50% - 36px);
+      margin-right: 36px;
+    }
+
+    &__footer {
+      order: 3;
+      width: 290px;
+      margin-top: -35px;
+      margin-right: auto;
+
+    }
+
     &__title {
+      flex-grow: 1;
       @include set-font-size($h2-font-size,medium);
       letter-spacing: -0.4px;
     }
 
     &__subtitle {
-      position:relative;
-      float:right;
-      top: -40px;
-      right: 30px;
       width: 70px;
+      margin-top: 12px;
+      margin-right: 29px;
+      margin-bottom: 0;
       line-height: 17px;
       text-align: center;
     }
 
-    &__content,
-    &__footer {
-      float: left;
-      width: 288px;
-      margin-right: 45px;
-    }
-
     &__descr {
       margin: 0;
-    }
-
-    &__img {
-      float: right;
-      width: 334px;
-      margin: 0;
-      margin-top: -5px;
     }
 
     &__specification {
@@ -172,36 +201,44 @@
 
 @media ($desktop-widths) {
   .product-week {
-    position: relative;
-    margin-top: 75px;
+    margin-top: 0;
+    margin-bottom: 50px;
 
     &__header {
-      position: relative;
-      z-index: 10;
-      padding-top: 49px;
+      margin-top: 54px;
+      margin-bottom: 46px;
+      flex-direction: row-reverse;
+      justify-content: flex-start;
+      align-items: center;
     }
 
     &__title {
-      margin-left: 171px;
+      z-index: 10;
+
       @include set-font-size($h2-font-size,large);
+      letter-spacing: -0.3px;
     }
 
     &__subtitle {
-      position: absolute;
-      left: 47px;
-      top: initial;
-      bottom: -22px;
+      margin-top: 0;
+      margin-right: 55px;
+      margin-left: 21px;
     }
 
-    &__content,
+    &__content {
+      margin-right: 50px;
+      margin-left: 150px;
+      flex-basis: calc(50% - 200px);
+    }
+
     &__footer {
-      margin-left: 175px;
-      margin-right: 525px;
+      margin-top: -120px;
+      margin-left: 150px;
+
     }
 
     &__specification {
       margin-top: 53px;
-      margin-bottom: 106px;
     }
 
     &__price {
@@ -209,10 +246,13 @@
     }
 
     &__img {
-      position: absolute;
-      top: 0;;
-      right: 0;
-      width: 568px;
+      margin-top: -158px;
+      align-self: flex-start;
+    }
+
+    &__img img {
+      width: auto;
+      min-height: 635px;
     }
   }
 }
