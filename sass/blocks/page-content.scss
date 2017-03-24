@@ -3,7 +3,8 @@
   padding: 0;
 
   &__title-wrapper {
-    @include container;
+    box-shadow: 0 -1px 0 0 $border-lightgrey;
+
   }
   &__title {
     margin: 0;
