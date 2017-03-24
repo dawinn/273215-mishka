@@ -1,11 +1,16 @@
 .page-header {
-  @include container;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: inset 0 1px 0 0 $border-lightgrey;
 
   &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 80px;
-
-    box-shadow: inset 0 1px 0 0 $border-lightgrey,
-    inset 0 -1px 0 0 $border-lightgrey;
   }
 }
 
@@ -13,8 +18,8 @@
   .page-header {
     &__logo {
       position: absolute;
-      width: 217px;;
-
+      width: 113px;;
+      left: 50px;
       height: 90px;
     }
   }

@@ -10,17 +10,4 @@
   font-style: normal;
   color: $text-gray;
   background-color: $bg-white;
-
-  & img {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
-@media ($tablet-widths) {
-
-}
-
-@media ($desktop-widths) {
-
 }
