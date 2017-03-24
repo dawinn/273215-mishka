@@ -42,9 +42,8 @@
   }
 
   .page-content__title {
-    margin-bottom: 81px;
-    padding-top: 96px;
-    padding-right: 40px;
+    margin-bottom: 80px;
+    padding-top: 95px;
     padding-bottom: 77px;
     padding-left: 39px;
     @include set-font-size($h1-font-size,medium);
@@ -62,6 +61,7 @@
     margin-bottom: 129px;
     padding-top: 93px;
     padding-bottom: 103px;
+    padding-left: 50px;
     @include set-font-size($h1-font-size,large);
   }
 
