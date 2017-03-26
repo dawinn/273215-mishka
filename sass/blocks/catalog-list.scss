@@ -13,6 +13,14 @@
     border: 1px solid $border-lightgrey;
     box-sizing: border-box;
   }
+
+  &__item:hover {
+    box-shadow: 0 6px 10px 0 rgba($border-black, 0.1);
+  }
+
+  &__item:active {
+    box-shadow: 0 3px 5px 0 rgba($border-black, 0.1);
+  }
 }
 
 @media ($tablet-widths) {

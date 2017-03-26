@@ -7,6 +7,7 @@
   color: $text-black;
 
   background: $bg-white;
+  box-sizing: border-box;
 
   &__img {
     margin: 0;
@@ -40,6 +41,19 @@
     line-height: 24px;
   }
 
+  &__title a {
+    color: $text-black;
+    text-decoration: none;
+  }
+
+  &__title a:hover {
+    color: rgba($text-black, 0.6);
+  }
+
+  &__title a:active {
+    color: rgba($text-black, 0.3);
+  }
+
   &__header  + &__footer {
     border-top: 1px solid $border-darklightgrey;
   }
@@ -49,6 +63,7 @@
     font-size: 13px;
     line-height: 30px;
     font-weight: normal;
+    color: $text-gray;
   }
 
   &__descr * + * {

@@ -24,6 +24,19 @@
     @include set-font-size($h2-font-size);
   }
 
+  &__title a {
+    color: $text-black;
+    text-decoration: none;
+  }
+
+  &__title a:hover {
+    color: rgba($text-black, 0.6);
+  }
+
+  &__title a:active {
+    color: rgba($text-black, 0.3);
+  }
+
   &__subtitle {
     margin-bottom: 30px;
 

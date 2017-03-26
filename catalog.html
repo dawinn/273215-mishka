@@ -57,12 +57,12 @@
 
       <div class="catalog-list">
         <section class="catalog-list__item  product">
-          <div class="product__img">
+          <a class="product__img" href="full-item.html">
             <img src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="Зайчик попрыгайчик">
-          </div>
+          </a>
           <div class="product__wrapper">
             <header class="product__header">
-              <h2 class="product__title">Зайчик-попрыгайчик</h2>
+              <h2 class="product__title"><a href="full-item.html">Зайчик-попрыгайчик</a></h2>
               <p class="product__descr">
                   <span>Рост 30 см</span>
                   <span>Вес 200 г</span>
@@ -72,18 +72,22 @@
               <div class="product__price">
                 1 200 руб.
               </div>
-              <button class="product__order-btn   product__order-btn--nojs">Заказать</button>
+              <form class="product-week__order-form" method="post" action="https://echo.htmlacademy.ru/">
+                <input type="hidden" name="title" value="Зайчик-попрыгайчик">
+                <input type="hidden" name="price" id="price-item11" value="1200">
+                <button class="product__order-btn  product__order-btn--nojs">Заказать</button>
+              </form>
             </footer>
           </div>
         </section>
 
         <section class="catalog-list__item  product">
-          <div class="product__img">
+          <a class="product__img" href="full-item.html">
             <img src="http://placehold.it/260x195" width="260" height="195" alt="Корзинка для белья">
-          </div>
+          </a>
           <div class="product__wrapper">
             <header class="product__header">
-              <h2 class="product__title">Корзинка для белья</h2>
+              <h2 class="product__title"><a  href="full-item.html">Корзинка для белья</a></h2>
               <p class="product__descr">
                 <span>Диаметр 15 см</span>
                 <span>высота 10 см</span>
@@ -93,18 +97,22 @@
               <div class="product__price">
                 690 руб.
               </div>
-              <button class="product__order-btn  product__order-btn--nojs">Заказать</button>
+              <form class="product-week__order-form" method="post" action="https://echo.htmlacademy.ru/">
+                <input type="hidden" name="title" value="Корзинка для белья">
+                <input type="hidden" name="price" id="price-item12" value="690">
+                <button class="product__order-btn  product__order-btn--nojs">Заказать</button>
+              </form>
             </footer>
           </div>
         </section>
 
         <section class="catalog-list__item  product">
-          <div class="product__img">
+          <a class="product__img" href="full-item.html">
             <img src="http://placehold.it/260x195" width="260" height="195" alt="Большая корзинка для игрушек">
-          </div>
+          </a>
           <div class="product__wrapper">
             <header class="product__header">
-              <h2 class="product__title">Большая корзинка для&nbsp;игрушек</h2>
+              <h2 class="product__title"><a href="full-item.html">Большая корзинка для&nbsp;игрушек</a></h2>
               <p class="product__descr">
                 <span>Диаметр 30 см</span>
                 <span>высота 30 см</span>
@@ -114,7 +122,11 @@
               <div class="product__price">
                 1 500 руб.
               </div>
-              <button class="product__order-btn  product__order-btn--nojs">Заказать</button>
+              <form class="product-week__order-form" method="post" action="https://echo.htmlacademy.ru/">
+                <input type="hidden" name="title" value="Большая корзинка для&nbsp;игрушек">
+                <input type="hidden" name="price" id="price-item13" value="1500">
+                <button class="product__order-btn  product__order-btn--nojs">Заказать</button>
+              </form>
             </footer>
           </div>
         </section>
@@ -132,7 +144,11 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
-
+          <a href="index.html">
+            <picture>
+              <img src="../img/logo-mobile.svg" alt="Милые штучки ручной работы">
+            </picture>
+          </a>
         </div>
         <p class="page-footer__social">
           <span class="social-links">
