@@ -41,14 +41,14 @@ for (var i=0; i < btn_tocart_array.length; i++){
 /// общие нажание ESC и клик по overlay
 
 window.addEventListener("keydown", function(event) {
-       if (event.keyCode === 27) {
-         if (modalWindow) {
-           if (modalWindow.classList.contains("modal-content--show")) {
-             windowClose(modalWindow);
-           }
-         }
-       }
-     });
+  if (event.keyCode === 27) {
+    if (modalWindow) {
+      if (modalWindow.classList.contains("modal-content--show")) {
+        windowClose(modalWindow);
+      }
+    }
+  }
+});
 overlay.addEventListener("click", function(event){
   if (modalWindow) {
     if (modalWindow.classList.contains("modal-content--show")) {
