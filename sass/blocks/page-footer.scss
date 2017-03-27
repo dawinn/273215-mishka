@@ -57,9 +57,10 @@
     }
 
     &__logo {
-      display: block;
+      display: flex;
       width: 102px;
       height: 143px;
+      align-items: center;
     }
 
     &__social {

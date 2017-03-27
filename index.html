@@ -11,9 +11,11 @@
   <body class="page">
     <header class="page-header">
       <div class="page-header__logo">
-
+        <picture>
+          <img src="img/logo-mobile.svg" alt="Милые штучки ручной работы">
+        </picture>
       </div>
-      <nav class="main-nav main-nav--closed main-nav--nojs">
+      <nav class="main-nav main-nav--closed npm  main-nav--nojs">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__items">
@@ -26,10 +28,7 @@
           </ul>
           <ul class="main-nav__widget-items">
             <li class="main-nav__widget-item">
-              <form class="main-nav__search-form  search-form" method="get" name="search" action="https://echo.htmlacademy.ru/">
-                <input class="search-form__input" type="search" name="search-string" id="search-input" placeholder="Поиск по сайту:">
-                <label class="search-form__label" for="search-input">Поиск по сайту</label>
-              </form>
+              <a class="main-nav__search" href="search-form.html">Поиск по сайту</a>
             </li>
             <li class="main-nav__widget-item">
               <a class="main-nav__widget-cart" href="knitting-to-order.html">Корзина: пока пуста</a>
@@ -49,23 +48,26 @@
         </div>
       </nav>
     </header>
-    <main class="page-content">
+    <main class="page-content  page-content--index-page">
       <div class="page-content__title-wrapper">
-        <h1 class="page-content__title  page-content__title--index-page">Милые&nbsp;штуки ручной работы&nbsp;для&nbsp;дома</h1>
+        <h1 class="page-content__title">Милые&nbsp;штуки ручной работы&nbsp;для&nbsp;дома</h1>
         <div class="quick-links">
-          <div class="quick-links__item  quick-links__item--left">
-            <a class="quick-links__link" href="home-furnishings.html">Предметы интерьера</a>
-          </div>
-          <div class="quick-links__item  quick-links__item--right">
-            <a class="quick-links__link" href="toys.html">Детские игрушки</a>
-          </div>
+          <a class="quick-links__item  quick-links__item--left" href="home-furnishings.html">
+            <span class="quick-links__link" >Предметы интерьера</span>
+          </a>
+          <a class="quick-links__item  quick-links__item--right" href="toys.html">
+            <span class="quick-links__link" >Детские игрушки</span>
+          </a>
         </div>
       </div>
 
       <section class="product-week">
         <div class="product-week__wrapper">
+          <a class="product-week__img" href="full-item.html">
+            <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
+          </a>
           <header class="product-week__header">
-            <h2 class="product-week__title">Вязаные корзинки</h2>
+            <h2 class="product-week__title"><a  href="full-item.html">Вязаные корзинки</a></h2>
             <b class="product-week__subtitle">Товар недели</b>
           </header>
           <div class="product-week__content">
@@ -91,17 +93,14 @@
               </dd>
             </dl>
           </div>
-          <div class="product-week__img">
-            <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
-          </div>
           <footer class="product-week__footer">
             <div class="product-week__price">
               Цена: 990 руб.
             </div>
             <form class="product-week__order-form" method="post" action="https://echo.htmlacademy.ru/">
               <input type="hidden" name="title" value="Вязаные корзинки">
-              <input type="hidden" name="price" id="price-item13" value="990" readonly>
-              <button class="product-week__order-btn btn product__order-btn--nojs">Заказать</button>
+              <input type="hidden" name="price" id="price-item13" value="990">
+              <button class="product-week__order-btn btn js-tocart">Заказать</button>
             </form>
           </footer>
         </div>
@@ -133,8 +132,8 @@
             </blockquote>
           </div>
           <div class="slider__control">
-            <!--<button class="slider__prev" type="button">Предыдущий отзыв</button>
-            <button class="slider__next" type="button">Следующий отзыв</button>-->
+            <button class="slider__prev" type="button">Предыдущий отзыв</button>
+            <button class="slider__next" type="button">Следующий отзыв</button>
           </div>
           <a class="reviews__write  btn" href="add_review.html">Написать</a>
         </div>
@@ -173,7 +172,11 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
-
+          <a href="index.html">
+            <picture>
+              <img src="img/logo-mobile.svg" alt="Милые штучки ручной работы">
+            </picture>
+          </a>
         </div>
         <p class="page-footer__social">
           <span class="social-links">
@@ -188,7 +191,36 @@
         </p>
       </div>
     </footer>
-    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=XRccL_Lvur5qfc217VO1PrxToS3VY2PP&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true&id=yandex_map"></script>
+
+    <div class="modal-content">
+      <div class="modal-content__wrapper">
+        <b class="modal-content__title">Добавить в&nbsp;корзину</b>
+        <form class="modal-content__form" method="post" action="https://echo.htmlacademy.ru/">
+          <p class="modal-content__form-prefix">Выберите размер:</p>
+          <div class="modal-content__fields-radio">
+            <div class="modal-content__field-radio">
+              <input type="radio" name="change-type" id="change-type-1" value="1" checked="checked">
+              <label for="change-type-1">S</label>
+            </div>
+            <div class="modal-content__field-radio">
+              <input type="radio" name="change-type" id="change-type-2" value="1">
+              <label for="change-type-2">M</label>
+            </div>
+            <div class="modal-content__field-radio">
+              <input type="radio" name="change-type" id="change-type-3" value="1">
+              <label for="change-type-3">L</label>
+            </div>
+          </div>
+          <button class="modal-content__btn  btn" type="submit">Добавить</button>
+        </form>
+      </div>
+      <div class="modal-overlay"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A79514ab3ed1279473d2cf5a76da1b71095131a243c3d099cfcb1ecf8c007e808&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=true&id=yandex_map"></script>
+
   </body>
 
 </html>

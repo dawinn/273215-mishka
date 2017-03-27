@@ -1,9 +1,10 @@
 .order-form {
-  width: 260px;
-  margin: 0 auto;
+  width: auto;
+  margin: 0;
   margin-top: -8px;
   margin-bottom: 56px;
-  padding: 0;
+  padding-right: 30px;
+  padding-left: 30px;
   font-size: 17px;
   line-height: 18px;
   font-weight: bold;
@@ -53,6 +54,12 @@
     color: $text-cyan;
   }
 
+  &__fields-radio,
+  &__fields-checkbox {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__field-radio,
   &__field-checkbox {
     min-height: 38px;
@@ -75,6 +82,7 @@
 
   &__field-radio label,
   &__field-checkbox label {
+        display: flex;
     position: relative;
     display: inline-block;
 
@@ -146,6 +154,8 @@
   }
 
   &__input {
+    display: flex;
+    flex-direction: column;
     margin-top: -6px;
     margin-bottom: 29px;
   }
@@ -195,7 +205,7 @@
 
   &__area {
     margin-top: -10px;
-    margin-bottom: 11px;
+    margin-bottom: 13px;
   }
 
   &__area label {
@@ -203,7 +213,7 @@
   }
 
   &__area textarea {
-    padding: 16px;
+    padding: 15px;
     width: 100%;
     box-sizing: border-box;
 
@@ -229,21 +239,20 @@
 @media ($tablet-widths) {
   .order-form {
     width: auto;
+    padding: 0;
     margin-bottom: -6px;
 
     font-size: 19px;
 
     &__prefix-note {
-      width: 668px;
-      margin: 0 auto;
       margin-bottom: 30px;
+      padding: 0 50px;
 
       @include set-font-size ($default-font-size,medium);
     }
 
-    &__wrapper > * {
-      width: 668px;
-      margin: 0 auto;
+    &__wrapper {
+      padding: 0 50px;
     }
 
     &__wrapper:nth-child(2n+1):not(:last-child) {
@@ -260,14 +269,19 @@
     &__fieldset-name {
       float: left;
       padding-top: 4px;
-      padding-left: 2px;
+      margin-left: 2px;
 
       font-size: 17px;
       line-height: 16px;
     }
 
-    &__field-radio {
+    &__fields-radio,
+    &__fields-checkbox {
+      align-items: flex-start;
       margin-left: 168px;
+    }
+
+    &__field-radio {
       margin-bottom: 24px;
       min-height: 52px;
     }
@@ -292,24 +306,22 @@
 
     &__fieldset--checklist {
       padding-top: 64px;
-      padding-bottom: 15px;
+      padding-bottom: 12px;
+      margin-right: -20px;
     }
 
     &__fields-checkbox {
       display: flex;
       flex-wrap: wrap;
+      flex-direction: row;
       justify-content: flex-start;
-      margin-left: 168px;
     }
 
     &__field-checkbox {
       flex-basis: 200px;
       flex-grow: 1;
       min-height: 52px;
-    }
-
-    &__field-checkbox:nth-child(2n) {
-      margin-left: 25px;
+      margin-bottom: 24px;
     }
 
       &__field-checkbox label{
@@ -331,12 +343,13 @@
     }
 
     &__fieldset--fio {
-      padding-top: 51px;
+      padding-top: 54px;
       margin-bottom: 13px;
     }
 
     &__input {
       display: flex;
+      flex-direction: row;
       margin-top: 0;
       margin-left: 168px;
       margin-bottom: 38px;
@@ -382,24 +395,20 @@
     }
 
     &__wrapper:last-child {
-      width: 668px;
-      margin: 0 auto;
-      @include clearfix;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
     }
 
     &__postfix-note {
-      float: right;
       margin: 0;
-      padding: 0;
       padding-top: 8px;
-      width: 315px;
 
       @include set-font-size($default-font-size, medium);
       text-align: right;
     }
 
     &__submit {
-      float: left;
       width: 230px;
       font-family: inherit;
     }
@@ -411,20 +420,18 @@
 
     font-size: 19px;
 
-    &__prefix-note {
-      width: 700px;
+    &__wrapper {
+      margin-left: 7px;
     }
 
-    &__wrapper > * {
-      width: 1050px;
+    &__prefix-note {
+      width: 700px;
+      margin: 0 auto;
+      margin-bottom: 31px;
     }
 
     &__fieldset-name {
-      padding-left: 57px;
-    }
-
-    &__field-radio {
-      margin-left: 170px;
+      margin-left: 55px;
     }
 
     &__fieldset--checklist {
@@ -435,7 +442,6 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-start;
-      margin-left: 170px;
       width: 790px;
     }
 
@@ -445,39 +451,32 @@
       min-height: 52px;
     }
 
-    &__field-checkbox:nth-child(2n) {
-      margin-left: 0;
-    }
-
     &__fieldset--fio {
-      padding-top: 51px;
+      padding-top: 53px;
     }
 
     &__input {
       width: 700px;
-      margin-left: 172px;
       margin-bottom: 38px;
     }
 
     &__area {
-      margin-left: 170px;
       margin-bottom: 32px;
       width: 700px;
     }
 
     &__wrapper:last-child {
       width: 700px;
+      margin: 0 auto;
     }
 
     &__postfix-note {
-      padding-top: 10px;
-      padding-right: 1px;
+      padding-top: 11px;
       width: 315px;
     }
 
     &__submit {
       width: 230px;
-      margin-left: -4px;
     }
   }
 }

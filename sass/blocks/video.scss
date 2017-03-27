@@ -37,6 +37,56 @@
   }
 }
 
+
+
+video::-webkit-media-controls-panel {
+  position: absolute;
+  top: calc(50% - 38px);
+  left: calc(50% - 50px);
+
+  display: block;
+  width: auto;
+  height: auto;
+
+  background: transparent;
+  border-radius: 0;
+}
+
+.video__viewer::-webkit-media-controls-enclosure {
+  width: 0;
+  height: 0;
+  border: none;
+}
+
+.video__viewer::-webkit-media-controls-play-button {
+  width: 101px;
+  height: 76px;
+  box-sizing: border-box;
+  background-image: url(../img/icon-play.svg);
+}
+
+.video__viewer::-webkit-media-controls-panel:hover {
+  transform: scale(1.2);
+}
+
+.video__viewer::-webkit-media-controls-panel:active {
+  opacity: (0.3);
+  transform: scale(0.8);
+}
+
+.video__viewer::-webkit-media-controls-timeline {
+  width: 0;
+  height: 0;
+
+  font-size: 0;
+
+  border-radius: none;
+}
+
+.video__viewer::-webkit-media-controls-current-time-display {
+  display: none
+}
+
 @media ($tablet-widths) {
   .video {
     margin-top: -1px;

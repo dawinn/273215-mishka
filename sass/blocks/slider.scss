@@ -3,7 +3,6 @@
   background-color: rgba($bg-white,0.3);
 
   &__control {
-    position: relative;
     display: flex;
 
     margin-top: 30px;
@@ -11,36 +10,35 @@
     border: none;
   }
 
-  &__control::before,
-  &__control::after{
-    content: "";
-    position: relative;
-    padding-top: 12px;
-    padding-right: 40px;
-    padding-bottom: 12px;
-    padding-left: 38px;
-    width: 51px;
-    height: 26px;
+  &__prev,
+  &__next {
+    flex-basis: calc(50%);
+    height: 50px;
 
     font-size: 0;
+    background-color: transparent;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 51px 26px;
     border: 1px solid $border-lightgrey;
   }
 
-  &__control::after {
-    content: "";
+  &__next {
     margin-left: -1px;
     background-image: url(../img/icon-right-arrow.svg);
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: 51px 26px;
   }
 
-  &__control::before{
-    content: "";
+
+  &__prev{
     background-image: url(../img/icon-left-arrow.svg);
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: 51px 26px;
+  }
+
+  &__prev:hover   {
+    background-color: red;
+  }
+
+  &__prev:active {
+    background-color: green;
   }
 }
 

@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка - Каталог товара</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link href="css/style.css" rel="stylesheet">
   </head>
 
@@ -12,12 +13,12 @@
       <div class="page-header__logo">
         <a href="index.html">
           <picture>
-            <img src="img/logo-mobile.svg" width="86" height="36" alt="Мишка — Милые штуки ручной  работы для дома">
+            <img src="img/logo-mobile.svg" alt="Милые штучки ручной работы">
           </picture>
         </a>
       </div>
-      <nav class="main-nav main-nav--closed main-nav--nojs">
-        <button class="main-nav__toggle" type="button" >Открыть меню</button>
+      <nav class="main-nav main-nav--closed npm  main-nav--nojs">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__items">
             <li class="main-nav__item">
@@ -29,10 +30,7 @@
           </ul>
           <ul class="main-nav__widget-items">
             <li class="main-nav__widget-item">
-              <form class="main-nav__search-form  search-form" method="get" name="search" action="https://echo.htmlacademy.ru/">
-                <input class="search-form__input" type="search" name="search-string" id="search-input" placeholder="Поиск по сайту:">
-                <label class="search-form__label" for="search-input">Поиск по сайту</label>
-              </form>
+              <a class="main-nav__search" href="search-form.html">Поиск по сайту</a>
             </li>
             <li class="main-nav__widget-item">
               <a class="main-nav__widget-cart" href="knitting-to-order.html">Корзина: пока пуста</a>
@@ -59,67 +57,85 @@
 
       <div class="catalog-list">
         <section class="catalog-list__item  product">
-          <div class="product__img">
+          <a class="product__img" href="full-item.html">
             <img src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="Зайчик попрыгайчик">
+          </a>
+          <div class="product__wrapper">
+            <header class="product__header">
+              <h2 class="product__title"><a href="full-item.html">Зайчик-попрыгайчик</a></h2>
+              <p class="product__descr">
+                  <span>Рост 30 см</span>
+                  <span>Вес 200 г</span>
+              </p>
+            </header>
+            <footer class="product__footer">
+              <div class="product__price">
+                1 200 руб.
+              </div>
+              <form class="product-week__order-form" method="post" action="https://echo.htmlacademy.ru/">
+                <input type="hidden" name="title" value="Зайчик-попрыгайчик">
+                <input type="hidden" name="price" id="price-item11" value="1200">
+                <button class="product__order-btn  js-tocart" type="submit">Заказать</button>
+              </form>
+            </footer>
           </div>
-          <header class="product__header">
-            <h2 class="product__title">Зайчик-попрыгайчик</h2>
-            <p class="product__descr">
-                <span>Рост 30 см</span>
-                <span>Вес 200 г</span>
-            </p>
-          </header>
-          <footer class="product__footer">
-            <div class="product__price">
-              1 200 руб.
-            </div>
-            <button class="product__order-btn   product__order-btn--nojs">Заказать</button>
-          </footer>
         </section>
 
         <section class="catalog-list__item  product">
-          <div class="product__img">
+          <a class="product__img" href="full-item.html">
             <img src="http://placehold.it/260x195" width="260" height="195" alt="Корзинка для белья">
+          </a>
+          <div class="product__wrapper">
+            <header class="product__header">
+              <h2 class="product__title"><a  href="full-item.html">Корзинка для белья</a></h2>
+              <p class="product__descr">
+                <span>Диаметр 15 см</span>
+                <span>высота 10 см</span>
+              </p>
+            </header>
+            <footer class="product__footer">
+              <div class="product__price">
+                690 руб.
+              </div>
+              <form class="product-week__order-form" method="post" action="https://echo.htmlacademy.ru/">
+                <input type="hidden" name="title" value="Корзинка для белья">
+                <input type="hidden" name="price" id="price-item12" value="690">
+                <button class="product__order-btn  js-tocart" type="submit">Заказать</button>
+              </form>
+            </footer>
           </div>
-          <header class="product__header">
-            <h2 class="product__title">Корзинка для белья</h2>
-            <p class="product__descr">
-              <span>Диаметр 15 см</span>
-              <span>высота 10 см</span>
-            </p>
-          </header>
-          <footer class="product__footer">
-            <div class="product__price">
-              690 руб.
-            </div>
-            <button class="product__order-btn  product__order-btn--nojs">Заказать</button>
-          </footer>
         </section>
 
         <section class="catalog-list__item  product">
-          <div class="product__img">
+          <a class="product__img" href="full-item.html">
             <img src="http://placehold.it/260x195" width="260" height="195" alt="Большая корзинка для игрушек">
+          </a>
+          <div class="product__wrapper">
+            <header class="product__header">
+              <h2 class="product__title"><a href="full-item.html">Большая корзинка для&nbsp;игрушек</a></h2>
+              <p class="product__descr">
+                <span>Диаметр 30 см</span>
+                <span>высота 30 см</span>
+              </p>
+            </header>
+            <footer class="product__footer">
+              <div class="product__price">
+                1 500 руб.
+              </div>
+              <form class="product-week__order-form" method="post" action="https://echo.htmlacademy.ru/">
+                <input type="hidden" name="title" value="Большая корзинка для&nbsp;игрушек">
+                <input type="hidden" name="price" id="price-item13" value="1500">
+                <button class="product__order-btn  js-tocart" type="submit">Заказать</button>
+              </form>
+            </footer>
           </div>
-          <header class="product__header">
-            <h2 class="product__title">Большая корзинка для игрушек</h2>
-            <p class="product__descr">
-              <span>Диаметр 30 см</span>
-              <span>высота 30 см</span>
-            </p>
-          </header>
-          <footer class="product__footer">
-            <div class="product__price">
-              1 500 руб.
-            </div>
-            <button class="product__order-btn  product__order-btn--nojs">Заказать</button>
-          </footer>
         </section>
 
         <section class="catalog-list__item  video">
           <h2 class="video__title">Процесс производства</h2>
-          <video class="video__viewer" preload="metadata" width="259" height="150" poster="img/video-mobile@1x.jpg"></video>
+          <video class="video__viewer" preload="metadata" width="259" height="150" controls="controls"  poster="img/video-mobile@1x.jpg"></video>
           <p class="video__descr">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-          <a class="video__order-link btn video__order-link--nojs"  href="form.html">Сделать заказ</a>
+          <a class="video__order-link btn js-tocart"  href="form.html">Сделать заказ</a>
         </section>
 
       </div>
@@ -128,7 +144,11 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
-
+          <a href="index.html">
+            <picture>
+              <img src="img/logo-mobile.svg" alt="Милые штучки ручной работы">
+            </picture>
+          </a>
         </div>
         <p class="page-footer__social">
           <span class="social-links">
@@ -143,7 +163,50 @@
         </p>
     </div>
     </footer>
-    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=XRccL_Lvur5qfc217VO1PrxToS3VY2PP&amp;width=100%25&amp;height=200&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true&id=yandex_map"></script>
+
+    <div class="modal-content">
+      <div class="modal-content__wrapper">
+        <b class="modal-content__title">Добавить в&nbsp;корзину</b>
+        <form class="modal-content__form" method="post" action="https://echo.htmlacademy.ru/">
+          <p class="modal-content__form-prefix">Выберите размер:</p>
+          <div class="modal-content__fields-radio">
+            <div class="modal-content__field-radio">
+              <input type="radio" name="change-type" id="change-type-1" value="1" checked="checked">
+              <label for="change-type-1">S</label>
+            </div>
+            <div class="modal-content__field-radio">
+              <input type="radio" name="change-type" id="change-type-2" value="1">
+              <label for="change-type-2">M</label>
+            </div>
+            <div class="modal-content__field-radio">
+              <input type="radio" name="change-type" id="change-type-3" value="1">
+              <label for="change-type-3">L</label>
+            </div>
+          </div>
+          <button class="modal-content__btn  btn" type="submit">Добавить</button>
+        </form>
+      </div>
+      <div class="modal-overlay"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
   </body>
 
 </html>

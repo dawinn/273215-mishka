@@ -48,6 +48,7 @@
     &__title {
       margin: 0;
       margin-bottom: 49px;
+      margin-left: -5px;
       padding-top: 77px;
       @include set-font-size($h2-font-size, medium);
     }
@@ -82,7 +83,7 @@
     }
 
     &__title {
-      margin-left: 175px;
+      margin-left: 172px;
       padding-top: 73px;
       @include set-font-size($h2-font-size, large);
     }

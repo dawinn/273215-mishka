@@ -3,6 +3,7 @@
 @import "variables.scss";
 
 @import "mixin.scss";
+@import "scaffolding.scss";
 
 @import "blocks/btn.scss";
 
@@ -26,3 +27,5 @@
 @import "blocks/video.scss";
 
 @import "blocks/order-form.scss";
+@import "blocks/modal-content";
+@import "blocks/modal-overlay";

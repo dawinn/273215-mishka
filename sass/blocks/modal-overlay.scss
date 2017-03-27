@@ -1,0 +1,18 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 30;
+
+  display: none;
+  width: auto;
+  height: auto;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  &--show {
+    display: flex;
+  }
+}

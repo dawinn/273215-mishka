@@ -3,7 +3,9 @@
   padding: 0;
 
   &__title-wrapper {
-    @include container;
+    background-color: $bg-lightgrey;
+    box-shadow: 0 -1px 0 0 $border-lightgrey;
+
   }
   &__title {
     margin: 0;
@@ -21,53 +23,55 @@
     background-color: $bg-lightgrey;
   }
 
-  &__title--index-page {
+  &--index-page  &__title-wrapper {
+    background: #f9f9f9 url(../img/hero-mobile@1x.jpg) 50% top no-repeat;
+    background-size: cover;
+  }
+
+  &--index-page  &__title {
     margin-bottom: 0;
     padding-bottom: 122px;
 
-    background: #f9f9f9 url(../img/hero-mobile@1x.jpg) 50% -19px no-repeat;
+    background: transparent;
   }
 }
 
 @media ($tablet-widths) {
-  .page-content  {
+  .page-content__title-wrapper {
+    width: 100%;
+  }
 
-    &__title-wrapper {
-      width: 100%;
-      background-color: $bg-lightgrey;
-    }
+  .page-content__title {
+    margin-bottom: 80px;
+    padding-top: 95px;
+    padding-bottom: 77px;
+    padding-left: 39px;
+    @include set-font-size($h1-font-size,medium);
+  }
 
-    &__title {
-      margin-bottom: 81px;
-      padding-top: 96px;
-      padding-right: 30px;
-      padding-bottom: 77px;
-      padding-left: 39px;
-      @include set-font-size($h1-font-size,medium);
-    }
-
-    &__title--index-page {
-      padding-top: 153px;
-      padding-bottom: 372px;
-    }
+  .page-content--index-page  .page-content__title {
+    padding-top: 153px;
+    padding-bottom: 373px;
   }
 }
 
 @media ($desktop-widths) {
-  .page-content {
-
-    &__title {
-      max-width: 1050px;
-      margin-bottom: 129px;
-      padding-top: 93px;
-      padding-bottom: 103px;
-      @include set-font-size($h1-font-size,large);
-    }
-
-    &__title--index-page {
-      padding-top: 153px;
-      padding-bottom: 359px;
-
-    }
+  .page-content__title {
+    max-width: 1050px;
+    margin-bottom: 129px;
+    padding-top: 93px;
+    padding-bottom: 103px;
+    padding-left: 50px;
+    @include set-font-size($h1-font-size,large);
   }
+
+  .page-content--index-page  .page-content__title-wrapper {
+    margin-bottom: 73px;
+  }
+
+  .page-content--index-page  .page-content__title {
+    padding-top: 153px;
+    padding-bottom: 359px;
+    padding-left: 50px;
+    }
 }

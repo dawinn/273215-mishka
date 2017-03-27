@@ -51,6 +51,23 @@
     margin: 0;
   }
 
+  &__data a {
+    padding-bottom: 4px;
+
+    color: $text-gray;
+    text-decoration: none;
+
+    border-bottom: 1px solid $text-darkcyan;
+  }
+
+  &__data a:hover {
+    color: $text-darkcyan;
+  }
+
+  &__data a:active {
+    opacity: 0.3;
+  }
+
   &__map {
     height: 455px;
     margin-bottom: 39px;
@@ -75,6 +92,7 @@
     &__title {
       position: relative;
       margin-bottom: 38px;
+      margin-left: -5px;
       padding-top: 0;
       padding-right: 51px;
       @include set-font-size($h2-font-size,medium);
@@ -136,7 +154,7 @@
       width: 330px;
       margin-top: 27px;
       margin-bottom: 53px;
-      margin-left: 50px;
+      margin-left: 54px;
       padding: 0;
       padding-left: 120px;
     }
@@ -160,12 +178,11 @@
     }
 
     &__info {
-      margin-left: 4px;
       justify-content: space-between;
     }
 
     &__data {
-      width: 248px;
+      width: 252px;
     }
 
     &__data + &__type {
@@ -180,7 +197,7 @@
     }
 
     &__write {
-      margin-left: 4px;
+      margin-left: 1px;
       width:227px;
     }
   }

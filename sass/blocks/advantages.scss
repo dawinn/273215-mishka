@@ -6,7 +6,7 @@
   font-weight: bold;
   color: $text-black;
 
-  //background-color: $bg-white;
+  background-color: $bg-white;
 
   &__wrapper {
     @include container;
@@ -36,13 +36,15 @@
 
 @media ($tablet-widths) {
   .advantages {
-    padding-top: 48px;
+    padding-top: 66px;
     font-size: 20px;
     line-height: 22px;
 
     &__title {
-      @include set-font-size($h2-font-size, medium);
+      margin-left: -5px;
       margin-bottom: 22px;
+
+      @include set-font-size($h2-font-size, medium);
     }
 
     &__items {
@@ -69,7 +71,7 @@
     &__title {
       @include set-font-size($h2-font-size, large);
       margin-bottom: 22px;
-      letter-spacing: -1px;
+      letter-spacing: -0.3px;
     }
 
     &__items {
