@@ -51,6 +51,23 @@
     margin: 0;
   }
 
+  &__data a {
+    padding-bottom: 4px;
+
+    color: $text-gray;
+    text-decoration: none;
+
+    border-bottom: 1px solid $text-darkcyan;
+  }
+
+  &__data a:hover {
+    color: $text-darkcyan;
+  }
+
+  &__data a:active {
+    opacity: 0.3;
+  }
+
   &__map {
     height: 455px;
     margin-bottom: 39px;
