@@ -51,8 +51,8 @@
     order: 1;
     width: 100%;
     height: auto;
-    margin-top: 28px;
-    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-bottom: 18px;
   }
 
   &__descr {
@@ -103,14 +103,13 @@
   &__order-btn {
     width: 100%;
     margin-top: 25px;
-    margin-bottom: 20px;
   }
 }
 
 @media ($tablet-widths) {
   .product-week {
     margin-top:45px;
-    margin-bottom: 31px;
+    margin-bottom: 52px;
     @include set-font-size($default-font-size,medium);
 
     &__wrapper {
@@ -215,7 +214,7 @@
 @media ($desktop-widths) {
   .product-week {
     margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 62px;
 
     &__header {
       margin-top: 54px;
