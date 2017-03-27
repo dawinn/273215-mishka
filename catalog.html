@@ -75,7 +75,7 @@
               <form class="product-week__order-form" method="post" action="https://echo.htmlacademy.ru/">
                 <input type="hidden" name="title" value="Зайчик-попрыгайчик">
                 <input type="hidden" name="price" id="price-item11" value="1200">
-                <button class="product__order-btn  product__order-btn--nojs">Заказать</button>
+                <button class="product__order-btn  js-tocart" type="submit">Заказать</button>
               </form>
             </footer>
           </div>
@@ -100,7 +100,7 @@
               <form class="product-week__order-form" method="post" action="https://echo.htmlacademy.ru/">
                 <input type="hidden" name="title" value="Корзинка для белья">
                 <input type="hidden" name="price" id="price-item12" value="690">
-                <button class="product__order-btn  product__order-btn--nojs">Заказать</button>
+                <button class="product__order-btn  js-tocart" type="submit">Заказать</button>
               </form>
             </footer>
           </div>
@@ -125,7 +125,7 @@
               <form class="product-week__order-form" method="post" action="https://echo.htmlacademy.ru/">
                 <input type="hidden" name="title" value="Большая корзинка для&nbsp;игрушек">
                 <input type="hidden" name="price" id="price-item13" value="1500">
-                <button class="product__order-btn  product__order-btn--nojs">Заказать</button>
+                <button class="product__order-btn  js-tocart" type="submit">Заказать</button>
               </form>
             </footer>
           </div>
@@ -135,7 +135,7 @@
           <h2 class="video__title">Процесс производства</h2>
           <video class="video__viewer" preload="metadata" width="259" height="150" controls="controls"  poster="img/video-mobile@1x.jpg"></video>
           <p class="video__descr">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-          <a class="video__order-link btn video__order-link--nojs"  href="form.html">Сделать заказ</a>
+          <a class="video__order-link btn js-tocart"  href="form.html">Сделать заказ</a>
         </section>
 
       </div>
@@ -163,6 +163,33 @@
         </p>
     </div>
     </footer>
+
+    <div class="modal-content">
+      <div class="modal-content__wrapper">
+        <b class="modal-content__title">Добавить в&nbsp;корзину</b>
+        <form class="modal-content__form" method="post" action="https://echo.htmlacademy.ru/">
+          <p class="modal-content__form-prefix">Выберите размер:</p>
+          <div class="modal-content__fields-radio">
+            <div class="modal-content__field-radio">
+              <input type="radio" name="change-type" id="change-type-1" value="1" checked="checked">
+              <label for="change-type-1">S</label>
+            </div>
+            <div class="modal-content__field-radio">
+              <input type="radio" name="change-type" id="change-type-2" value="1">
+              <label for="change-type-2">M</label>
+            </div>
+            <div class="modal-content__field-radio">
+              <input type="radio" name="change-type" id="change-type-3" value="1">
+              <label for="change-type-3">L</label>
+            </div>
+          </div>
+          <button class="modal-content__btn  btn" type="submit">Добавить</button>
+        </form>
+      </div>
+      <div class="modal-overlay"></div>
+    </div>
+
+    <script src="js/script.js"></script>
 
     <script>
       var navMain = document.querySelector('.main-nav');
