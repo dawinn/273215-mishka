@@ -154,15 +154,32 @@
   }
 
   &__input {
+    position: relative;
     display: flex;
     flex-direction: column;
     margin-top: -6px;
     margin-bottom: 29px;
+
+    & svg {
+      position: absolute;
+      top: -4px;
+      right: 6px;
+      opacity: 0.2;
+    }
+
+    &:hover svg,
+    &:active svg,
+    & input:focus + svg {
+      opacity: 1;
+      fill: $text-darkcyan;
+    }
   }
 
   &__input--tel {
     margin-top: -11px;
     margin-bottom: 29px;
+
+
   }
 
   &__input--email {
@@ -194,7 +211,8 @@
   }
 
   &__input input:hover,
-  &__input input:active {
+  &__input input:active,
+  &__input input:focus {
     border-bottom-color: $border-cyan;
   }
 
@@ -225,7 +243,8 @@
   }
 
   &__area textarea:hover,
-  &__area textarea:active {
+  &__area textarea:active,
+  &__area textarea:focus {
     border-color: $border-cyan;
     outline-color: $border-cyan;
   }
@@ -318,7 +337,7 @@
     }
 
     &__field-checkbox {
-      flex-basis: 200px;
+      flex-basis: calc(50%);
       flex-grow: 1;
       min-height: 52px;
       margin-bottom: 24px;
@@ -354,6 +373,9 @@
       margin-left: 168px;
       margin-bottom: 38px;
 
+      & svg {
+        right: 24px;
+      }
     }
 
     &__input label {
@@ -391,7 +413,7 @@
     &__area {
       margin-left: 168px;
       margin-bottom: 37px;
-      width: 502px;
+      width: auto;
     }
 
     &__wrapper:last-child {
@@ -417,6 +439,7 @@
 
 @media ($desktop-widths) {
   .order-form {
+    margin-bottom: 0px;
 
     font-size: 19px;
 
@@ -430,6 +453,12 @@
       margin-bottom: 31px;
     }
 
+    &__fieldset {
+      margin-left: auto;
+      margin-right: auto;
+      width: auto;
+      max-width: 1050px;
+    }
     &__fieldset-name {
       margin-left: 55px;
     }
@@ -446,7 +475,7 @@
     }
 
     &__field-checkbox {
-      flex-basis: 240px;
+      flex-basis: calc(33%);
       flex-grow: 1;
       min-height: 52px;
     }
@@ -458,6 +487,10 @@
     &__input {
       width: 700px;
       margin-bottom: 38px;
+
+      & svg {
+        right: 6px;
+      }
     }
 
     &__area {

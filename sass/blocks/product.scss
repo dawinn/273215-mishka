@@ -11,23 +11,25 @@
 
   &__img {
     margin: 0;
-    margin-bottom: 23px;
     padding: 0;
   }
 
   &__header,
   &__footer {
     margin-left: 26px;
-    margin-right: 28px;
+    margin-right: 32px;
   }
 
+  &__wrapper {
+    margin-top: 22px;
+  }
   &__header {
-    padding-bottom: 19px;
+    padding-bottom: 20px;
   }
 
   &__footer {
     padding-top: 20px;
-    padding-bottom: 28px;
+    padding-bottom: 26px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -77,14 +79,31 @@
   }
 
   &__order-btn {
+    position: relative;
     width: 21px;
     height: 18px;
 
     font-size: 0;
     background: $bg-white;
-    background-image: url(../img/icon-cart.svg);
 
     border: none;
+
+    & svg {
+      width: 21px;
+      height: 18px;
+
+      opacity: 0.2;
+    }
+
+    &:hover svg {
+      fill: $text-cyan;
+      opacity: 1;
+    }
+
+    &:active svg {
+      fill: $text-cyan;
+      opacity: 0.3;
+    }
   }
 }
 
@@ -99,18 +118,19 @@
       margin-bottom: -6px;
     }
 
+    &__img img {
+      width: 332px;
+      height: 333px;
+    }
+
     &__wrapper {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
 
       flex-basis: calc(50% - 58px);
+      margin-top: 1px;
       margin-right: 30px;
-    }
-
-    &__img img {
-      width: 332px;
-      height: 333px;
     }
 
     &__header {
@@ -130,11 +150,11 @@
     &__footer {
       display: flex;
       justify-content: space-between;
-      align-items: stretch;
+      align-items: center;
       padding: 0;
-      padding-top: 22px;
+      padding-top: 20px;
       margin-left: 4px;
-      margin-right: 0;
+      margin-right: 7px;
       margin-bottom: 26px;
 
       font-size: 17px;
@@ -152,13 +172,17 @@
     &__img {
       flex-basis: auto;
       flex-grow: 0;
-      width: 100%;
+      width: auto;
       height: 462px;
       margin: 0;
       margin-bottom: 25px;
 
-      object-fit: fill;
       box-sizing: border-box;
+    }
+
+    &__img img {
+      width: 100%;
+      height: 462px;
     }
 
     &__wrapper {

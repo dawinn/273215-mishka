@@ -8,8 +8,9 @@
   background-color: $bg-lightgrey;
 
   &__wrapper {
-    @include container;
-    width: 260px;
+    width: auto;
+    margin: 0 auto;
+    padding: 0 30px;
   }
 
   &__social + &__copyright {
@@ -21,32 +22,50 @@
 
   &__social {
     margin: 0;
-    padding: 24px 0;
+    padding-top: 24px;
+    padding-bottom: 18px;
+    margin-left: -7px;
   }
 
   &__copyright {
     display: block;
     margin: 0;
-    padding: 27px 0;
+    padding: 22px 0;
 
     text-align: center;
 
   }
   &__copyright-link {
-    vertical-align: middle;
-    display: inline-block;
     width: 27px;
     height: 24px;
+    margin: 0 auto;
+    vertical-align: middle;
+
+    font-size: inherit;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &__copyright-link svg {
     margin-left: 20px;
-    font-size: 0;
-    background-image: url(../img/logo-htmlacademy.svg);
-    background-repeat: no-repeat;
-    background-size: 27px 24px;
+    vertical-align: middle;
+
+    fill: $text-cyan;
+  }
+
+  &__copyright-link:hover svg,
+  &__copyright-link:active svg {
+    fill: $text-darkcyan;
+  }
+
+  &__copyright-link:active{
+    opacity: 0.3;
   }
 }
 
 @media ($tablet-widths) {
   .page-footer {
+    width: 100%;
     margin-top: 54px;
 
     &__wrapper {
@@ -54,6 +73,9 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 0 50px;
     }
 
     &__logo {
@@ -63,10 +85,19 @@
       align-items: center;
     }
 
+    &__logo:hover svg {
+      fill: $text-darkcyan;
+    }
+
+    &__logo:active svg {
+      fill: $text-darkcyan;
+      opacity: 0.3;
+    }
+
     &__social {
       margin-left: 75px;
       padding: 0;
-      padding-top: 5px;
+      padding-top: 14px;
     }
 
     &__social + &__copyright {
@@ -86,12 +117,14 @@
 
 @media ($desktop-widths) {
   .page-footer {
+    margin-top: 52px;
+
     &__social {
-      padding-top: 0;
+      padding-top: 10px;
     }
 
     &__copyright {
-      padding-top: 0;
+      padding-top: 7px;
     }
   }
 }
