@@ -220,12 +220,13 @@
       max-width: 1150px;
       margin: 0 auto;
       padding-right: 50px;
-      padding-left: 75px;
+      padding-left: 50px;
     }
 
     &__header {
       margin-top: 54px;
       margin-bottom: 46px;
+      margin-left: 25px;
       flex-direction: row-reverse;
       justify-content: flex-start;
       align-items: center;
@@ -245,23 +246,24 @@
     }
 
     &__content {
-      margin-right: 37px;
-      margin-left: 150px;
+      margin-right: 26px;
+      margin-left: 175px;
       flex-basis: calc(50% - 200px);
     }
 
     &__footer {
-      margin-top: -123px;
-      margin-left: 150px;
+      margin-top: -120px;
+      margin-left: 175px;
 
     }
 
     &__specification {
       margin-top: 53px;
+      padding-bottom: 123px;
     }
 
     &__descr {
-      padding-right: 15px;
+      padding-right: 25px;
     }
 
     &__price {
