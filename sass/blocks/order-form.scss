@@ -204,7 +204,9 @@
 
     font-size: inherit;
     line-height: inherit;
-    color: inherit;
+    color: $text-gray;
+
+    background-color: inherit;
 
     border: none;
     border-bottom: 2px solid $border-black;
@@ -276,6 +278,10 @@
 
     &__wrapper:nth-child(2n+1):not(:last-child) {
       background-color: $bg-lightgrey;
+
+      & input {
+        background-color: $bg-lightgrey;
+      }
     }
 
     &__fieldset {
