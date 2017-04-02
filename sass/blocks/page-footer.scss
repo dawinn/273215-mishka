@@ -46,15 +46,15 @@
     text-decoration: none;
   }
 
-  &__copyright-link svg {
+  &__copyright-svg {
     margin-left: 20px;
     vertical-align: middle;
 
     fill: $text-cyan;
   }
 
-  &__copyright-link:hover svg,
-  &__copyright-link:active svg {
+  &__copyright-link:hover &__copyright-svg,
+  &__copyright-link:active &__copyright-svg {
     fill: $text-darkcyan;
   }
 
@@ -85,11 +85,17 @@
       align-items: center;
     }
 
-    &__logo:hover svg {
+    &__logo-svg{
+      display: block;
+      width: 102px;
+      height: 34px;
+    }
+
+    &__logo:hover &__logo-svg {
       fill: $text-darkcyan;
     }
 
-    &__logo:active svg {
+    &__logo:active &__logo-svg {
       fill: $text-darkcyan;
       opacity: 0.3;
     }
