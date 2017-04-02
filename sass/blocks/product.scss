@@ -80,7 +80,7 @@
 
   &__order-btn {
     position: relative;
-    width: 21px;
+    width: 100%;
     height: 18px;
 
     font-size: 0;
@@ -88,19 +88,19 @@
 
     border: none;
 
-    & svg {
+    & .product__btn-svg {
       width: 21px;
       height: 18px;
 
       opacity: 0.2;
     }
 
-    &:hover svg {
+    &:hover .product__btn-svg {
       fill: $text-cyan;
       opacity: 1;
     }
 
-    &:active svg {
+    &:active .product__btn-svg {
       fill: $text-cyan;
       opacity: 0.3;
     }

@@ -131,7 +131,7 @@
             <legend class="order-form__fieldset-name">Тел</legend>
             <div class="order-form__input  order-form__input--tel">
               <label for="tel">Тел</label>
-              <input type="tel" name="tel" id="tel" pattern="" placeholder="+7 ХХХ ХХ ХХ*" value="" ><svg class="page-footer__copyright-svg" width="25" height="24">
+              <input type="tel" name="tel" id="tel" pattern="" placeholder="+7 ХХХ ХХ ХХ*" value="" ><svg class="page-footer__input-svg" width="25" height="24">
                 <use xlink:href="#icon-phone"></use>
               </svg>
             </div>
@@ -140,7 +140,7 @@
             <legend class="order-form__fieldset-name">E-mail</legend>
             <div class="order-form__input  order-form__input--email">
               <label for="email">E-mail</label>
-              <input type="email" name="email" id="email" pattern="" placeholder="Ваш Email*" value="" required="required"><svg class="page-footer__copyright-svg" width="32" height="32">
+              <input type="email" name="email" id="email" pattern="" placeholder="Ваш Email*" value="" required="required"><svg class="page-footer__input-svg" width="32" height="32">
                 <use xlink:href="#icon-mail"></use>
               </svg>
             </div>
@@ -192,8 +192,22 @@
       </div>
     </footer>
 
-    <script src="js/script.js"></script>
-    <script src="js/picturefill.min.js"></script>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
   </body>
 
 </html>
