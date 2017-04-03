@@ -1,12 +1,24 @@
 .advantages {
+  position: relative;
   margin: 0;
-  padding-top: 40px;
+  padding-top: 35px;
   font-size: 17px;
   line-height: 20px;
   font-weight: bold;
   color: $text-black;
 
   background-color: $bg-white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 7px;
+
+    background-image: url(../img/bg-zigzag-line.svg);
+    background-size: auto 7px;
+  }
 
   &__wrapper {
     @include container;
@@ -28,9 +40,77 @@
   }
 
   &__item {
+    position: relative;
+
     margin: 0;
     padding-bottom: 24px;
     padding-top: 59px;
+  }
+
+  &__item::before {
+    content: "";
+    position: absolute;
+  }
+
+  &__item:nth-child(1)::before {
+    width: 32px;
+    height: 37px;
+    top: 3px;
+    left: 7px;
+    background-image: url(../img/icon-feature-1.svg);
+    background-size: 32px 37px;
+
+  }
+
+  &__item:nth-child(2)::before {
+    width: 47px;
+    height: 27px;
+    top: 3px;
+    left: 0;
+    background-image: url(../img/icon-feature-3.svg);
+    background-size: 47px 27px;
+
+  }
+
+  &__item:nth-child(3)::before {
+    width: 36px;
+    height: 28px;
+    top: 9px;
+    left: 6px;
+    background-image: url(../img/icon-feature-5.svg);
+    background-size: 36px 28px;
+
+  }
+
+  &__item:nth-child(4)::before {
+    width: 35px;
+    height: 34px;
+    top: 6px;
+    left: 3px;
+    background-image: url(../img/icon-feature-2.svg);
+    background-size: 35px 34px;
+
+  }
+
+  &__item:nth-child(5)::before {
+    z-index: 10;
+    width: 55px;
+    height: 23px;
+    top: 7px;
+    left: -6px;
+    background-image: url(../img/icon-feature-4.svg);
+    background-size: 55px 23px;
+
+  }
+
+  &__item:nth-child(6)::before {
+    width: 32px;
+    height: 37px;
+    top: 3px;
+    left: 3px;
+    background-image: url(../img/icon-feature-6.svg);
+    background-size: 32px 37px;
+
   }
 }
 
@@ -39,6 +119,12 @@
     padding-top: 66px;
     font-size: 20px;
     line-height: 22px;
+
+    &::before {
+      height: 17px;
+
+      background-size: auto 17px;
+    }
 
     &__title {
       margin-left: -5px;
@@ -57,12 +143,51 @@
       padding-top: 81px;
       float: left;
     }
+
+    &__item::before {
+      top: 30px;
+    }
+
+    &__item:nth-child(1)::before {
+      top: 27px;
+      left: 9px;
+    }
+
+    &__item:nth-child(2)::before {
+      top: 29px;
+      left: 1px;
+    }
+
+    &__item:nth-child(3)::before {
+      top: 33px;
+      left: 7px;
+    }
+
+    &__item:nth-child(4)::before {
+      top: 31px;
+      left: 2px;
+    }
+
+    &__item:nth-child(5)::before {
+      top: 32px;
+      left: -7px;
+    }
+
+    &__item:nth-child(6)::before {
+      top: 27px;
+    }
   }
 }
 
 @media ($desktop-widths) {
   .advantages {
     padding-top: 85px;
+
+    &::before {
+      height: 23px;
+
+      background-size: auto 23px;
+    }
 
     &__wrapper {
       width: 700px;

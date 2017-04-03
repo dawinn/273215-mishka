@@ -13,6 +13,14 @@
     align-items: center;
     height: 80px;
   }
+
+  &__logo a[href]:hover {
+    opacity: 0.6;
+  }
+
+  &__logo a[href]:active {
+    opacity: 0.3;
+  }
 }
 
 @media ($tablet-widths) {

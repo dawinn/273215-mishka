@@ -8,4 +8,5 @@
 css/*.css
 node_modules/
 screenshots/
+build/
 Thumbs.db

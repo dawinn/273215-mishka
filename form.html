@@ -13,7 +13,9 @@
       <div class="page-header__logo">
         <a href="index.html">
           <picture>
-            <img src="img/logo-mobile.svg" alt="Милые штучки ручной работы">
+            <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img src="img/logo-mobile.svg" alt="Мишка" width="86" height="35">
           </picture>
         </a>
       </div>
@@ -30,10 +32,14 @@
           </ul>
           <ul class="main-nav__widget-items">
             <li class="main-nav__widget-item">
-              <a class="main-nav__search" href="search-form.html">Поиск по сайту</a>
+              <a class="main-nav__search-link" href="search-form.html">Поиск по сайту<svg class="main-nav__search-icon" width="18" height="18">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icons-sprite.svg#icon-search"></use>
+              </svg></a>
             </li>
             <li class="main-nav__widget-item">
-              <a class="main-nav__widget-cart" href="knitting-to-order.html">Корзина: пока пуста</a>
+              <a class="main-nav__widget-cart" href="knitting-to-order.html">Корзина: пока пуста<svg class="main-nav__search-icon" width="21" height="18">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icons-sprite.svg#icon-cart"></use>
+              </svg></a>
             </li>
           </ul>
           <ul class="main-nav__add-items">
@@ -124,14 +130,18 @@
             <legend class="order-form__fieldset-name">Тел</legend>
             <div class="order-form__input  order-form__input--tel">
               <label for="tel">Тел</label>
-              <input type="tel" name="tel" id="tel" pattern="" placeholder="+7 ХХХ ХХ ХХ*" value="">
+              <input type="tel" name="tel" id="tel" pattern="" placeholder="+7 ХХХ ХХ ХХ*" value="" ><svg class="page-footer__copyright-svg" width="25" height="24">
+                <use xlink:href="img/icons-sprite.svg#icon-phone"></use>
+              </svg>
             </div>
           </fieldset>
           <fieldset class="order-form__fieldset  order-form__fieldset--email">
             <legend class="order-form__fieldset-name">E-mail</legend>
             <div class="order-form__input  order-form__input--email">
               <label for="email">E-mail</label>
-              <input type="email" name="email" id="email" pattern="" placeholder="Ваш Email*" value="">
+              <input type="email" name="email" id="email" pattern="" placeholder="Ваш Email*" value="" required="required"><svg class="page-footer__copyright-svg" width="32" height="32">
+                <use xlink:href="img/icons-sprite.svg#icon-mail"></use>
+              </svg>
             </div>
           </fieldset>
         </div>
@@ -154,21 +164,28 @@
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
           <a href="index.html">
-            <picture>
-              <img src="img/logo-mobile.svg" alt="Милые штучки ручной работы">
-            </picture>
+            <svg class="page-footer__copyright-svg" width="102" height="34">
+              <use xlink:href="img/logo-footer.svg#Layer_1"></use>
+            </svg>
           </a>
         </div>
         <p class="page-footer__social">
           <span class="social-links">
-            <a class="social-link  social-link--in" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
-            <a class="social-link  social-link--fb" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
-            <a class="social-link  social-link--tw" href="https://twitter.com/htmlacademy_ru">Наш Твитер</a>
+            <a class="social-link  social-link--in" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме<svg class="page-footer__copyright-svg" width="23" height="22">
+              <use xlink:href="img/icons-sprite.svg#icon-insta"></use>
+            </svg></a>
+            <a class="social-link  social-link--fb" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке<svg class="page-footer__copyright-svg" width="15" height="29">
+              <use xlink:href="img/icons-sprite.svg#icon-fb"></use>
+            </svg></a>
+            <a class="social-link  social-link--tw" href="https://twitter.com/htmlacademy_ru">Наш Твитер<svg class="page-footer__copyright-svg" width="24" height="20">
+              <use xlink:href="img/icons-sprite.svg#icon-twitter"></use>
+            </svg></a>
           </span>
         </p>
         <p class="page-footer__copyright">
-          Разработано:
-          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">Разработано: <svg class="page-footer__copyright-svg" width="27" height="34">
+            <use xlink:href="img/logo-htmlacademy.svg#Layer_1"></use>
+          </svg></a>
         </p>
       </div>
     </footer>

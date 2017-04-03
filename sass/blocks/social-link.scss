@@ -1,34 +1,26 @@
 .social-link {
-  width: 30px;
-  height: 30px;
-
   font-size: 0;
 
-  background-size: 24px 24px;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+  fill: $text-black;
+
+  &:hover {
+    fill: $text-darkcyan;
+  }
+
+  &:active {
+    fill: $text-darkcyan;
+    opacity: 0.3;
+  }
 
   &--fb {
-    background-image: url(../img/icon-fb.svg);
+    margin-right: 37px;
+    margin-left: 41px;
   }
 
-  &--tw {
-    background-image: url(../img/icon-twitter.svg);
-  }
-
-  &--in {
-    background-image: url(../img/icon-insta.svg);
-  }
-
-  & + & {
-    margin-left: 33px;
-  }
 }
 
 @media ($tablet-widths) {
   .social-link {
-    & + & {
-      margin-left: 28px;
-    }
+
   }
 }
