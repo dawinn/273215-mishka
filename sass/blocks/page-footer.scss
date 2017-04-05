@@ -1,136 +1,136 @@
 .page-footer {
-
   font-size: 19px;
   line-height: 18px;
   color: $text-black;
   font-weight: bold;
 
   background-color: $bg-lightgrey;
+}
 
-  &__wrapper {
-    width: auto;
-    margin: 0 auto;
-    padding: 0 30px;
-  }
+.page-footer__wrapper {
+  width: auto;
+  margin: 0 auto;
+  padding: 0 30px;
+}
 
-  &__social + &__copyright {
-    border-top: 1px solid $border-darklightgrey;
-  }
-  &__logo {
-    display: none;
-  }
+.page-footer__social + .page-footer__copyright {
+  border-top: 1px solid $border-darklightgrey;
+}
 
-  &__social {
-    margin: 0;
-    padding-top: 24px;
-    padding-bottom: 18px;
-    margin-left: -7px;
-  }
+.page-footer__logo {
+  display: none;
+}
 
-  &__copyright {
-    display: block;
-    margin: 0;
-    padding: 22px 0;
+.page-footer__social {
+  margin: 0;
+  padding-top: 24px;
+  padding-bottom: 18px;
+  margin-left: -7px;
+}
 
-    text-align: center;
+.page-footer__copyright {
+  display: block;
+  margin: 0;
+  padding: 22px 0;
 
-  }
-  &__copyright-link {
-    width: 27px;
-    height: 24px;
-    margin: 0 auto;
-    vertical-align: middle;
+  text-align: center;
+}
 
-    font-size: inherit;
-    color: inherit;
-    text-decoration: none;
-  }
+.page-footer__copyright-link {
+  width: 27px;
+  height: 24px;
+  margin: 0 auto;
+  vertical-align: middle;
 
-  &__copyright-svg {
-    margin-left: 20px;
-    vertical-align: middle;
+  font-size: inherit;
+  color: inherit;
+  text-decoration: none;
+}
 
-    fill: $text-cyan;
-  }
+.page-footer__copyright-svg {
+  margin-left: 20px;
+  vertical-align: middle;
 
-  &__copyright-link:hover &__copyright-svg,
-  &__copyright-link:active &__copyright-svg {
-    fill: $text-darkcyan;
-  }
+  fill: $text-cyan;
+}
 
-  &__copyright-link:active{
-    opacity: 0.3;
-  }
+.page-footer__copyright-link:hover .page-footer__copyright-svg,
+.page-footer__copyright-link:active .page-footer__copyright-svg {
+  fill: $text-darkcyan;
+}
+
+.page-footer__copyright-link:active{
+  opacity: 0.3;
 }
 
 @media ($tablet-widths) {
   .page-footer {
     width: 100%;
     margin-top: 54px;
+  }
 
-    &__wrapper {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1150px;
-      margin: 0 auto;
-      padding: 0 50px;
-    }
+  .page-footer__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
 
-    &__logo {
-      display: flex;
-      width: 102px;
-      height: 143px;
-      align-items: center;
-    }
+  .page-footer__logo {
+    display: flex;
+    width: 102px;
+    height: 143px;
+    align-items: center;
+  }
 
-    &__logo-svg{
-      display: block;
-      width: 102px;
-      height: 34px;
-    }
+  .page-footer__logo-svg{
+    display: block;
+    width: 102px;
+    height: 34px;
+  }
 
-    &__logo:hover &__logo-svg {
-      fill: $text-darkcyan;
-    }
+  .page-footer__logo:hover .page-footer__logo-svg {
+    fill: $text-darkcyan;
+  }
 
-    &__logo:active &__logo-svg {
-      fill: $text-darkcyan;
-      opacity: 0.3;
-    }
+  .page-footer__logo:active .page-footer__logo-svg {
+    fill: $text-darkcyan;
+    opacity: 0.3;
+  }
 
-    &__social {
-      margin-left: 75px;
-      padding: 0;
-      padding-top: 14px;
-    }
+  .page-footer__social {
+    margin-left: 75px;
+    padding: 0;
+    padding-top: 14px;
+  }
 
-    &__social + &__copyright {
-      border-top: none;
-    }
+  .page-footer__social + .page-footer__copyright {
+    border-top: none;
+  }
 
-    &__copyright {
-      padding: 0;
-      padding-top: 12px;
-    }
+  .page-footer__copyright {
+    padding: 0;
+    padding-top: 12px;
+  }
 
-    &__copyright-link {
-      height: 34px;
-    }
+  .page-footer__copyright-link {
+    height: 34px;
   }
 }
 
 @media ($desktop-widths) {
   .page-footer {
     margin-top: 52px;
+  }
 
-    &__social {
-      padding-top: 10px;
-    }
+  .page-footer__social {
+    padding-top: 10px;
+  }
 
-    &__copyright {
-      padding-top: 7px;
-    }
+  .page-footer__copyright {
+    padding-top: 7px;
   }
 }

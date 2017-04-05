@@ -6,36 +6,37 @@
   font-size: 15px;
   line-height: 30px;
   color: $text-gray;
+}
 
-  &__wrapper {
-    @include container;
-    width: 260px;
-  }
+.reviews__wrapper {
+  @include container;
+  width: 260px;
+}
 
-  &__title {
-    margin: 0;
-    margin-bottom: 25px;
-    @include set-font-size($h2-font-size);
-  }
+.reviews__title {
+  margin: 0;
+  margin-bottom: 25px;
+  @include set-font-size($h2-font-size);
+}
 
-  &__item {
-    margin: 0;
-  }
+.reviews__item {
+  margin: 0;
+}
 
-  &__item p{
-    margin-bottom: 23px;
-  }
-  &__auhor-name {
-    font-style: normal;
-    font-size: 17px;
-    margin-top: 30px;
-  }
+.reviews__item p{
+  margin-bottom: 23px;
+}
 
-  &__auhor-name b {
-    font-size: 18px;
-    line-height: 24px;
-    color: $text-black;
-  }
+.reviews__auhor-name {
+  font-style: normal;
+  font-size: 17px;
+  margin-top: 30px;
+}
+
+.reviews__auhor-name b {
+  font-size: 18px;
+  line-height: 24px;
+  color: $text-black;
 }
 
 @media ($tablet-widths) {
@@ -45,29 +46,29 @@
     font-size: 17px;
     background: $bg-white url(../img/review@1x.jpg) -10px 0 no-repeat;
     background-size: auto 457px;
+  }
 
-    &__title {
-      margin: 0;
-      margin-bottom: 49px;
-      margin-left: -5px;
-      padding-top: 77px;
-      @include set-font-size($h2-font-size, medium);
-    }
+  .reviews__title {
+    margin: 0;
+    margin-bottom: 49px;
+    margin-left: -5px;
+    padding-top: 77px;
+    @include set-font-size($h2-font-size, medium);
+  }
 
-    &__item p{
-      margin-bottom: 56px;
-    }
+  .reviews__item p{
+    margin-bottom: 56px;
+  }
 
-    &__auhor-name span {
-      display: block;
-    }
+  .reviews__auhor-name span {
+    display: block;
+  }
 
-    &__write {
-      position: absolute;
-      top: 79px;
-      right: 0;
-      width: 170px;
-    }
+  .reviews__write {
+    position: absolute;
+    top: 79px;
+    right: 0;
+    width: 170px;
   }
 
   @media (min-resolution: 144dpi),
@@ -84,33 +85,32 @@
     margin-top: 57px;
     padding-bottom: 35px;
     margin-bottom: 29px;
-
-    &__wrapper {
-      padding-bottom: 96px;
-      background: $bg-white url(../img/review@1x.jpg) 0 0 no-repeat;
-    }
-
-    &__title {
-      margin-left: 172px;
-      padding-top: 73px;
-      @include set-font-size($h2-font-size, large);
-    }
-
-    &__item {
-      margin-left: 175px;
-      margin-right: 100px;
-    }
-
-    &__item p{
-      margin-bottom: 36px;
-    }
-
-    &__write {
-      position: absolute;
-      top: 80px;
-      right: 0;
-      width: 171px;
-    }
   }
 
+  .reviews__wrapper {
+    padding-bottom: 96px;
+    background: $bg-white url(../img/review@1x.jpg) 0 0 no-repeat;
+  }
+
+  .reviews__title {
+    margin-left: 172px;
+    padding-top: 73px;
+    @include set-font-size($h2-font-size, large);
+  }
+
+  .reviews__item {
+    margin-left: 175px;
+    margin-right: 100px;
+  }
+
+  .reviews__item p{
+    margin-bottom: 36px;
+  }
+
+  .reviews__write {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 171px;
+  }
 }

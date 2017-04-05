@@ -1,78 +1,74 @@
 .slider {
   background-color: $bg-white;
   background-color: rgba($bg-white,0.3);
-
-  &__control {
-    display: flex;
-
-    margin-top: 30px;
-    margin-bottom: 37px;
-    border: none;
-  }
-
-  &__prev,
-  &__next {
-    flex-basis: calc(50%);
-    height: 50px;
-
-    font-size: 0;
-    background-color: transparent;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: 51px 26px;
-    border: 1px solid $border-lightgrey;
-  }
-
-  &__next {
-    margin-left: -1px;
-    background-image: url(../img/icon-right-arrow.svg);
-  }
-
-
-  &__prev{
-    background-image: url(../img/icon-left-arrow.svg);
-  }
-
-  &__prev:hover,
-  &__next:hover   {
-    opacity: 0.6;
-  }
-
-  &__prev:active,
-  &__next:active {
-    opacity: 0.3;
-  }
 }
 
+.slider__control {
+  display: flex;
+
+  margin-top: 30px;
+  margin-bottom: 37px;
+  border: none;
+}
+
+.slider__prev,
+.slider__next {
+  flex-basis: calc(50%);
+  height: 50px;
+
+  font-size: 0;
+  background-color: transparent;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 51px 26px;
+  border: 1px solid $border-lightgrey;
+}
+
+.slider__next {
+  margin-left: -1px;
+  background-image: url(../img/icon-right-arrow.svg);
+}
+
+.slider__prev{
+  background-image: url(../img/icon-left-arrow.svg);
+}
+
+.slider__prev:hover,
+.slider__next:hover   {
+  opacity: 0.6;
+}
+
+.slider__prev:active,
+.slider__next:active {
+  opacity: 0.3;
+}
 
 @media ($tablet-widths) {
   .slider {
     position: relative;
+  }
 
-    &__control {
-      position: absolute;
-      bottom: 4px;
-      right: 4px;
+  .slider__control {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
 
-      width: 167px;
-      margin: 0;
-    }
+    width: 167px;
+    margin: 0;
+  }
 
-    &__prev,
-    &__next {
-      border: none;
-    }
+  .slider__prev,
+  .slider__next {
+    border: none;
   }
 }
 
 @media ($desktop-widths) {
-  .slider {
-    &__control {
-      position: absolute;
-      bottom: 101px;
-      right: 2px;
-      width: 172px;
-      margin: 0;
-    }
+  .slider__control {
+    position: absolute;
+    bottom: 101px;
+    right: 2px;
+    width: 172px;
+    margin: 0;
   }
 }

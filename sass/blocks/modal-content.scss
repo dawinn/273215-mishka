@@ -1,7 +1,6 @@
 .modal-content {
   display: none;
 
-
   background: rgba(255, 255, 255, 0.9);
 
   &--show {
@@ -16,95 +15,93 @@
     width: 100%;
     height: 100%;
   }
+}
 
-  &__wrapper {
-    z-index: 50;
-    margin: auto;
-    padding: 30px;
-    padding-bottom: 46px;
+.modal-content__wrapper {
+  z-index: 50;
+  margin: auto;
+  padding: 30px;
+  padding-bottom: 46px;
 
-    box-shadow: 0 -1px 0 0 #c6c6c6,
-                0 5px 10px 0 rgba(#000101,0.25);
-  }
+  box-shadow: 0 -1px 0 0 #c6c6c6,
+              0 5px 10px 0 rgba(#000101,0.25);
+}
 
-  &__title {
-    display: block;
-    margin-bottom: 12px;
+.modal-content__title {
+  display: block;
+  margin-bottom: 12px;
 
-    font-size: 25px;
-    line-height: 30px;
-    text-align: center;
-    text-transform: uppercase;
-  }
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
 
-  &__form-prefix {
-    margin-top: 11px;
-    margin-bottom: 22px;
-    font-size: 15px;
-    line-height: 30px;
-    text-align: center;
-  }
+.modal-content__form-prefix {
+  margin-top: 11px;
+  margin-bottom: 22px;
+  font-size: 15px;
+  line-height: 30px;
+  text-align: center;
+}
 
-  &__fields-radio {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 32px;
-  }
+.modal-content__fields-radio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
 
-  &__field-radio {
-    display: block;
-    flex-basis: calc(33% - 5px);
+.modal-content__field-radio {
+  display: block;
+  flex-basis: calc(33% - 5px);
 
-    text-align: center;
-  }
-  &__field-radio input {
-    display: none;
-  }
+  text-align: center;
+}
 
-  &__field-radio label {
-    display: block;
-    vertical-align: middle;
-    padding: 16px;
-    font-size: 17px;
-    font-weight: bold;
-    line-height: 16px;
+.modal-content__field-radio input {
+  display: none;
+}
 
-    border: 2px solid rgba($border-grey, 0.1);
-  }
+.modal-content__field-radio label {
+  display: block;
+  vertical-align: middle;
+  padding: 16px;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 16px;
 
-  &__field-radio:hover label {
-    border-color: rgba($border-grey,0.3);
-  }
+  border: 2px solid rgba($border-grey, 0.1);
+}
 
-  &__field-radio input:checked + label {
-    border-color: $border-cyan;
-  }
+.modal-content__field-radio:hover label {
+  border-color: rgba($border-grey,0.3);
+}
 
+.modal-content__field-radio input:checked + label {
+  border-color: $border-cyan;
+}
 
-  &__btn {
-    width: 100%;
-    color: $text-white;
-    background: $border-cyan;
-    border: 2px solid $border-cyan;
-  }
+.modal-content__btn {
+  width: 100%;
+  color: $text-white;
+  background: $border-cyan;
+  border: 2px solid $border-cyan;
 
-  &__btn:hover {
+  &:hover {
     background-color: #59d5bc;
     border-color: #59d5bc;
   }
 
-  &__btn:active {
+  &:active {
     color: rgba($text-white, 0.3);
   }
 }
 
 @media ($tablet-widths) {
-  .modal-content {
-    &__wrapper {
-      width: 350px;
-      padding-left: 108px;
-      padding-right: 108px;
-    }
+  .modal-content__wrapper {
+    width: 350px;
+    padding-left: 108px;
+    padding-right: 108px;
   }
 }
